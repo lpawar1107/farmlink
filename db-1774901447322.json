@@ -1,0 +1,241 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Organic Tomatoes",
+      "emoji": "🍅",
+      "price": 2.5,
+      "unit": "kg",
+      "farmer": "Ravi Kumar",
+      "farmerId": 2,
+      "dist": 1.2,
+      "cat": "veg",
+      "qty": 50,
+      "fresh": true,
+      "lat": 18.522,
+      "lng": 73.8575
+    },
+    {
+      "id": 2,
+      "name": "Sweet Corn",
+      "emoji": "🌽",
+      "price": 1.8,
+      "unit": "dozen",
+      "farmer": "Priya Farms",
+      "farmerId": 3,
+      "dist": 2.4,
+      "cat": "grain",
+      "qty": 30,
+      "fresh": true,
+      "lat": 18.525,
+      "lng": 73.862
+    },
+    {
+      "id": 3,
+      "name": "Baby Spinach",
+      "emoji": "🥬",
+      "price": 1.2,
+      "unit": "bunch",
+      "farmer": "Green Valley",
+      "farmerId": 4,
+      "dist": 0.8,
+      "cat": "veg",
+      "qty": 20,
+      "fresh": false,
+      "lat": 18.519,
+      "lng": 73.854
+    },
+    {
+      "id": 4,
+      "name": "Fresh Carrots",
+      "emoji": "🥕",
+      "price": 1.5,
+      "unit": "kg",
+      "farmer": "Ravi Kumar",
+      "farmerId": 2,
+      "dist": 1.2,
+      "cat": "veg",
+      "qty": 40,
+      "fresh": true,
+      "lat": 18.5215,
+      "lng": 73.8555
+    },
+    {
+      "id": 5,
+      "name": "Raw Milk",
+      "emoji": "🥛",
+      "price": 0.9,
+      "unit": "liter",
+      "farmer": "Anand Dairy",
+      "farmerId": 5,
+      "dist": 3.1,
+      "cat": "dairy",
+      "qty": 100,
+      "fresh": false,
+      "lat": 18.515,
+      "lng": 73.84
+    },
+    {
+      "id": 6,
+      "name": "Fresh Basil",
+      "emoji": "🌿",
+      "price": 0.8,
+      "unit": "bunch",
+      "farmer": "Herb Garden",
+      "farmerId": 6,
+      "dist": 4.5,
+      "cat": "herb",
+      "qty": 15,
+      "fresh": true,
+      "lat": 18.53,
+      "lng": 73.87
+    },
+    {
+      "id": 7,
+      "name": "Alphonso Mango",
+      "emoji": "🥭",
+      "price": 4.5,
+      "unit": "kg",
+      "farmer": "Mango Estate",
+      "farmerId": 7,
+      "dist": 6.2,
+      "cat": "fruit",
+      "qty": 25,
+      "fresh": true,
+      "lat": 18.54,
+      "lng": 73.88
+    },
+    {
+      "id": 8,
+      "name": "Farm Eggs",
+      "emoji": "🥚",
+      "price": 3,
+      "unit": "dozen",
+      "farmer": "Anand Dairy",
+      "farmerId": 5,
+      "dist": 3.1,
+      "cat": "dairy",
+      "qty": 60,
+      "fresh": false,
+      "lat": 18.513,
+      "lng": 73.842
+    }
+  ],
+  "listings": [
+    {
+      "id": 1,
+      "name": "Organic Tomatoes",
+      "emoji": "🍅",
+      "price": 2.5,
+      "unit": "kg",
+      "qty": 50,
+      "status": "active",
+      "orders": 12
+    },
+    {
+      "id": 4,
+      "name": "Fresh Carrots",
+      "emoji": "🥕",
+      "price": 1.5,
+      "unit": "kg",
+      "qty": 8,
+      "status": "low",
+      "orders": 5
+    }
+  ],
+  "convos": [
+    {
+      "id": 1,
+      "name": "Ravi Kumar",
+      "emoji": "👨‍🌾",
+      "online": true,
+      "unread": 2,
+      "time": "10:32 AM",
+      "preview": "Is the tomato still available?",
+      "messages": [
+        {
+          "id": 1,
+          "from": "them",
+          "text": "Hello! I saw your listing for tomatoes.",
+          "time": "10:20 AM"
+        },
+        {
+          "id": 2,
+          "from": "me",
+          "text": "Yes! Fresh picked this morning 🍅",
+          "time": "10:22 AM"
+        },
+        {
+          "id": 3,
+          "from": "them",
+          "text": "Great! What's the minimum order?",
+          "time": "10:30 AM"
+        },
+        {
+          "id": 4,
+          "from": "them",
+          "text": "Is the tomato still available?",
+          "time": "10:32 AM"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Priya Farms",
+      "emoji": "👩‍🌾",
+      "online": true,
+      "unread": 0,
+      "time": "Yesterday",
+      "preview": "I will deliver tomorrow morning",
+      "messages": [
+        {
+          "id": 1,
+          "from": "me",
+          "text": "Hi! I want 5 dozen sweet corn 🌽",
+          "time": "Yesterday"
+        },
+        {
+          "id": 2,
+          "from": "them",
+          "text": "Sure! That will be $9 total.",
+          "time": "Yesterday"
+        },
+        {
+          "id": 3,
+          "from": "me",
+          "text": "Can you deliver?",
+          "time": "Yesterday"
+        },
+        {
+          "id": 4,
+          "from": "them",
+          "text": "I will deliver tomorrow morning",
+          "time": "Yesterday"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Anand Dairy",
+      "emoji": "🧑‍🌾",
+      "online": false,
+      "unread": 0,
+      "time": "Mon",
+      "preview": "Thank you for your order!",
+      "messages": [
+        {
+          "id": 1,
+          "from": "them",
+          "text": "Thank you for your order!",
+          "time": "Mon"
+        },
+        {
+          "id": 2,
+          "from": "me",
+          "text": "Great quality milk, will order again!",
+          "time": "Mon"
+        }
+      ]
+    }
+  ]
+}

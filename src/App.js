@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FarmMarket from './FarmMarket';
+import Login from './components/Login';
 
-function App() {
+export default function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('fm_user');
+      if (raw) setUser(JSON.parse(raw));
+    } catch (e) { /* ignore */ }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login setUser={setUser} />} />
+        {/* Render FarmMarket for all app routes so internal views (profile, chat, map) open inside the phone UI */}
+        <Route path="/" element={<FarmMarket user={user} setUser={setUser} />} />
+        <Route path="/chat" element={<FarmMarket user={user} setUser={setUser} />} />
+        <Route path="/cart" element={<FarmMarket user={user} setUser={setUser} />} />
+        <Route path="/map" element={<FarmMarket user={user} setUser={setUser} />} />
+        <Route path="/profile" element={<FarmMarket user={user} setUser={setUser} />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
