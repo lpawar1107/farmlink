@@ -20,8 +20,8 @@ const styles = `
   }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); min-height: 100vh; display: flex; justify-content: center; padding: 20px 10px; }
   .phone { width: 390px; min-height: 844px; background: var(--cream); border-radius: 0px; overflow: hidden; box-shadow: none; position: relative; display: flex; flex-direction: column; margin-left: auto; margin-right: auto; }
-  .statusbar { background: var(--soil); height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; color: var(--wheat); font-size: 12px; font-weight: 600; flex-shrink: 0; position: sticky; top: 0; z-index: 15; }
-  .header { background: var(--soil); padding: 8px 24px 8px; flex-shrink: 0; position: sticky; top: 44px; z-index: 15; }
+  .statusbar { display: none; }
+  .header { background: var(--soil); padding: 8px 24px 8px; flex-shrink: 0; position: sticky; top: 0; z-index: 15; }
   .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding: 10px 0 0; }
   .logo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--wheat); font-weight: 700; display: flex; align-items: center; gap: 8px; }
   .logo-icon { width: 32px; height: 32px; background: var(--leaf); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
@@ -172,6 +172,98 @@ const CATEGORIES = [
   { id: "herb", label: "Herbs", icon: "🌿" },
 ];
 
+// Language support - English, Hindi, Marathi, Tamil, Telugu
+const LANGUAGES = {
+  en: { name: "English", label: "English" },
+  hi: { name: "हिंदी", label: "Hindi" },
+  mr: { name: "मराठी", label: "Marathi" },
+  ta: { name: "தமிழ்", label: "Tamil" },
+  te: { name: "తెలుగు", label: "Telugu" },
+};
+
+const TRANSLATIONS = {
+  en: {
+    buyer: "🛒 Buyer",
+    farmer: "🌱 Farmer",
+    home: "Home",
+    map: "Map",
+    cart: "Cart",
+    chat: "Chat",
+    profile: "Profile",
+    searchPlaceholder: "Search produce or farm...",
+    nearbyProduce: "Nearby Produce",
+    sortedBy: "Sorted by distance",
+    listings: "listings",
+    myDashboard: "My Dashboard",
+    myListings: "My Listings",
+    dashboard: "Dashboard",
+    messages: "Messages 💬",
+    conversations: "conversations",
+    unread: "unread",
+    sign: "Sign",
+    signIn: "Sign in",
+    signOut: "Sign out",
+    addToCart: "Added to cart!",
+    price: "$",
+  },
+  hi: {
+    buyer: "🛒 क्रेता",
+    farmer: "🌱 किसान",
+    home: "होम",
+    map: "नक्शा",
+    cart: "कार्ट",
+    chat: "चैट",
+    profile: "प्रोफाइल",
+    searchPlaceholder: "उपज या खेत खोजें...",
+    nearbyProduce: "पास की उपज",
+    sortedBy: "दूरी से क्रमबद्ध",
+    listings: "सूचियाँ",
+    myDashboard: "मेरा डैशबोर्ड",
+    myListings: "मेरी सूचियाँ",
+    dashboard: "डैशबोर्ड",
+    messages: "संदेश 💬",
+    conversations: "बातचीत",
+    unread: "अपठित",
+    sign: "साइन",
+    signIn: "साइन इन करें",
+    signOut: "साइन आउट करें",
+    addToCart: "कार्ट में जोड़ा गया!",
+    price: "₹",
+  },
+  mr: {
+    buyer: "🛒 खरेदीदार",
+    farmer: "🌱 शेतकरी",
+    home: "होम",
+    map: "नकाशा",
+    cart: "कार्ट",
+    chat: "चॅट",
+    profile: "प्रोफाइल",
+    searchPlaceholder: "उत्पादन किंवा खेत शोधा...",
+    nearbyProduce: "जवळचे उत्पादन",
+    sortedBy: "अंतराद्वारे क्रमबद्ध",
+    listings: "यादी",
+    myDashboard: "माझे डॅशबोर्ड",
+    myListings: "माझ्या यादी",
+    dashboard: "डॅशबोर्ड",
+    messages: "संदेश 💬",
+    conversations: "संभाषण",
+    unread: "अपठित",
+    sign: "साइन",
+    signIn: "साइन इन करा",
+    signOut: "साइन आउट करा",
+    addToCart: "कार्टमध्ये जोडले गेले!",
+    price: "₹",
+  },
+};
+
+// Currency support - USD, INR, EUR, GBP
+const CURRENCIES = {
+  USD: { symbol: "$", rate: 1, name: "US Dollar" },
+  INR: { symbol: "₹", rate: 82.5, name: "Indian Rupee" },
+  EUR: { symbol: "€", rate: 0.92, name: "Euro" },
+  GBP: { symbol: "£", rate: 0.79, name: "British Pound" },
+};
+
 const PRODUCE_EMOJIS = ["🥕","🥦","🍅","🌽","🥬","🍆","🫑","🧅","🥔","🍠","🫘","🌾","🍎","🍊","🍋","🍇","🫐","🍓","🥝","🥛","🧀","🥚","🌿","🌱"];
 
 const INITIAL_PRODUCTS = [
@@ -246,6 +338,8 @@ export default function FarmMarket({ user, setUser }) {
   const [chatInput, setChatInput] = useState("");
   const messagesEndRef = useRef(null);
   const [form, setForm] = useState({ name: "", price: "", unit: "kg", qty: "", cat: "veg", emoji: "🍅" });
+  const [language, setLanguage] = useState("en");
+  const [currency, setCurrency] = useState("INR");
 
   const totalUnread = convos.reduce((a, c) => a + c.unread, 0);
 
@@ -338,12 +432,22 @@ export default function FarmMarket({ user, setUser }) {
     setTimeout(() => setToast(null), 2100);
   };
 
+  const formatPrice = (priceInUSD) => {
+    const currencyObj = CURRENCIES[currency];
+    const convertedPrice = (priceInUSD * currencyObj.rate).toFixed(2);
+    return `${currencyObj.symbol}${convertedPrice}`;
+  };
+
+  const t = (key) => {
+    return TRANSLATIONS[language]?.[key] || key;
+  };
+
   const addToCart = (product, e) => {
     e?.stopPropagation();
     if (cartSet.has(product.id)) return;
     setCart(c => [...c, { ...product }]);
     setCartSet(s => new Set([...s, product.id]));
-    showToast(`${product.emoji} Added to cart!`);
+    showToast(`${product.emoji} ${t('addToCart')}`);
   };
 
   const openConvo = (convo) => {
@@ -440,8 +544,15 @@ export default function FarmMarket({ user, setUser }) {
             <div className="statusbar"><span>9:41</span><span>📶 🔋</span></div>
 
               <Header role={role} setRole={setRole} navigateHome={() => navigate('/')} user={user} setUser={setUser} />
-
-          <div className="scroll-area" ref={scrollRef}>
+              
+              <div style={{background:"var(--paper)",padding:"6px 20px",display:"flex",gap:"10px",fontSize:"11px"}}>
+                <select value={language} onChange={(e)=>setLanguage(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"4px 6px",background:"white",cursor:"pointer",fontSize:"11px"}}>
+                  {Object.entries(LANGUAGES).map(([code,lang])=><option key={code} value={code}>{lang.label}</option>)}
+                </select>
+                <select value={currency} onChange={(e)=>setCurrency(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"4px 6px",background:"white",cursor:"pointer",fontSize:"11px"}}>
+                  {Object.entries(CURRENCIES).map(([code,curr])=><option key={code} value={code}>{code}</option>)}
+                </select>
+              </div>
 
             {/* CHAT LIST */}
             {activeNav === "chat" && (
