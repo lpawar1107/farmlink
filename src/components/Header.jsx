@@ -14,7 +14,6 @@ export default function Header({ role, setRole, navigateHome, user, setUser }) {
 
   const avatar = user ? (user.name.split(' ').map(s=>s[0]).slice(0,2).join('')) : '👨‍🌾';
 
-  const handleProfile = () => { setOpen(false); nav('/profile'); };
   // dispatch a global event as a fallback so the container can react and show profile
   const handleProfileWithEvent = () => { setOpen(false); try { window.dispatchEvent(new Event('openProfile')); } catch(e){} nav('/profile'); };
   const handleLogin = () => { setOpen(false); nav('/login'); };
