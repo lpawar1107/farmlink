@@ -543,15 +543,17 @@ export default function FarmMarket({ user, setUser }) {
       <style>{GOOGLE_FONTS + styles}</style>
       <div style={{ display:"flex", justifyContent:"center", minHeight:"100vh", background:"linear-gradient(135deg,#d4e8c0,#e8dac0)", padding:"20px 10px" }}>
         <div className="phone">
-            <div className="statusbar"><span>9:41</span><span>📶 🔋</span></div>
+            <div className="statusbar"></div>
 
               <Header role={role} setRole={setRole} navigateHome={() => navigate('/')} user={user} setUser={setUser} />
               
-              <div style={{background:"var(--paper)",padding:"6px 20px",display:"flex",gap:"10px",fontSize:"11px"}}>
-                <select value={language} onChange={(e)=>setLanguage(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"4px 6px",background:"white",cursor:"pointer",fontSize:"11px"}}>
+              <div style={{background:"var(--soil)",padding:"8px 20px",display:"flex",gap:"12px",fontSize:"12px",alignItems:"center",borderBottom:"1px solid var(--bark)",position:"sticky",top:0,zIndex:14}}>
+                <label style={{color:"var(--wheat)",fontWeight:500,minWidth:"60px"}}>Language:</label>
+                <select value={language} onChange={(e)=>setLanguage(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"5px 8px",background:"white",cursor:"pointer",fontSize:"12px",fontWeight:500}}>
                   {Object.entries(LANGUAGES).map(([code,lang])=><option key={code} value={code}>{lang.label}</option>)}
                 </select>
-                <select value={currency} onChange={(e)=>setCurrency(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"4px 6px",background:"white",cursor:"pointer",fontSize:"11px"}}>
+                <label style={{color:"var(--wheat)",fontWeight:500,minWidth:"60px"}}>Currency:</label>
+                <select value={currency} onChange={(e)=>setCurrency(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"5px 8px",background:"white",cursor:"pointer",fontSize:"12px",fontWeight:500}}>
                   {Object.entries(CURRENCIES).map(([code,curr])=><option key={code} value={code}>{code}</option>)}
                 </select>
               </div>
