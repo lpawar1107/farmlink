@@ -19,7 +19,7 @@ const styles = `
     --paper: #f5ede0; --mist: #e8ddd0; --sky: #d4e8f0; --sun: #f2a93b;
   }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); min-height: 100vh; display: flex; justify-content: center; padding: 20px 10px; }
-  .phone { width: 390px; min-height: 844px; background: var(--cream); border-radius: 44px; overflow: hidden; box-shadow: 0 0 0 10px var(--soil), 0 0 0 12px #7a5c3a, 0 40px 80px rgba(61,43,31,0.35); position: relative; display: flex; flex-direction: column; }
+  .phone { width: 390px; min-height: 844px; background: var(--cream); border-radius: 0px; overflow: hidden; box-shadow: none; position: relative; display: flex; flex-direction: column; }
   .statusbar { background: var(--soil); height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; color: var(--wheat); font-size: 12px; font-weight: 600; flex-shrink: 0; }
   .header { background: var(--soil); padding: 14px 24px 20px; flex-shrink: 0; }
   .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
@@ -29,15 +29,10 @@ const styles = `
   .role-toggle { display: flex; background: rgba(255,255,255,0.12); border-radius: 0px; padding: 3px; gap: 2px; }
   .role-btn { flex: 1; padding: 7px 12px; border-radius: 0px; border: none; background: transparent; color: rgba(232,201,122,0.7); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 5px; }
   .role-btn.active { background: var(--wheat); color: var(--soil); font-weight: 600; }
-  .scroll-area { flex: 1; overflow-y: auto; padding-bottom: 90px; }
-  /* hide default scrollbar unless the container has the .show-scroll class */
-  .scroll-area:not(.show-scroll) { scrollbar-width: none; -ms-overflow-style: none; }
-  .scroll-area:not(.show-scroll)::-webkit-scrollbar { display: none; }
-  /* when .show-scroll is applied, show a thin styled scrollbar */
-  .scroll-area.show-scroll { overflow-y: scroll; -webkit-overflow-scrolling: touch; padding-right: 6px; scrollbar-width: thin; scrollbar-color: rgba(78,124,68,0.6) transparent; }
-  .scroll-area.show-scroll::-webkit-scrollbar { width: 10px; }
-  .scroll-area.show-scroll::-webkit-scrollbar-track { background: transparent; }
-  .scroll-area.show-scroll::-webkit-scrollbar-thumb { background: rgba(78,124,68,0.75); border-radius: 8px; border: 2px solid rgba(255,255,255,0.6); }
+  .scroll-area { flex: 1; overflow-y: auto; padding-bottom: 90px; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(78,124,68,0.6) transparent; }
+  .scroll-area::-webkit-scrollbar { width: 8px; }
+  .scroll-area::-webkit-scrollbar-track { background: transparent; }
+  .scroll-area::-webkit-scrollbar-thumb { background: rgba(78,124,68,0.6); border-radius: 4px; }
   .section-pad { padding: 0 20px; }
   /* when a section is rendered at the very top (profile), reduce the extra top spacing */
   .section-pad.profile-pad { padding-top: 6px; }
@@ -446,7 +441,7 @@ export default function FarmMarket({ user, setUser }) {
 
               <Header role={role} setRole={setRole} navigateHome={() => navigate('/')} user={user} setUser={setUser} />
 
-          <div className={`scroll-area ${activeNav==="home" || activeNav==="chat" || activeNav==="map" ? 'show-scroll' : ''}`} ref={scrollRef}>
+          <div className="scroll-area" ref={scrollRef}>
 
             {/* CHAT LIST */}
             {activeNav === "chat" && (
