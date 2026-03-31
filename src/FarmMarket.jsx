@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useNavigate, useLocation } from 'react-router-dom';
 import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
@@ -442,21 +442,21 @@ export default function FarmMarket({ user, setUser }) {
     return TRANSLATIONS[language]?.[key] || key;
   };
 
-  const addToCart = (product, e) => {
+  const addToCart = useCallback((product, e) => {
     e?.stopPropagation();
     if (cartSet.has(product.id)) return;
     setCart(c => [...c, { ...product }]);
     setCartSet(s => new Set([...s, product.id]));
     showToast(`${product.emoji} ${t('addToCart')}`);
-  };
+  }, [cartSet, language]);
 
-  const openConvo = (convo) => {
+  const openConvo = useCallback((convo) => {
     const cleared = { ...convo, unread: 0 };
     setConvos(cs => cs.map(c => c.id === convo.id ? cleared : c));
     setActiveConvo(cleared);
-  };
+  }, []);
 
-  const sendMessage = (text) => {
+  const sendMessage = useCallback((text) => {
     const msg = text || chatInput;
     if (!msg.trim()) return;
     const newMsg = { id: Date.now(), from: "me", text: msg, time: "Just now" };
@@ -474,9 +474,9 @@ export default function FarmMarket({ user, setUser }) {
         return next;
       });
     }, 1500);
-  };
+  }, [activeConvo, chatInput]);
 
-  const startChat = (product) => {
+  const startChat = useCallback((product) => {
     const existing = convos.find(c => c.name === product.farmer);
     if (existing) {
       setSelectedProduct(null); navigate('/chat');
@@ -490,9 +490,9 @@ export default function FarmMarket({ user, setUser }) {
       setSelectedProduct(null); navigate('/chat');
       setTimeout(() => openConvo(nc), 50);
     }
-  };
+  }, [convos, openConvo]);
 
-  const handleAddListing = async () => {
+  const handleAddListing = useCallback(async () => {
     if (!form.name || !form.price || !form.qty) { showToast("Fill all fields"); return; }
     // generate simple lat/lng near Pune
     const baseLat = 18.5204; const baseLng = 73.8567;
@@ -528,13 +528,15 @@ export default function FarmMarket({ user, setUser }) {
       setForm({ name: "", price: "", unit: "kg", qty: "", cat: "veg", emoji: "🍅" });
       showToast("✅ Listing added (offline)!");
     }
-  };
+  }, [form, products, myListings, showToast]);
 
-  const filtered = products.filter(p => {
-    const mc = activeCat === "all" || p.cat === activeCat;
-    const ms = p.name.toLowerCase().includes(search.toLowerCase()) || p.farmer.toLowerCase().includes(search.toLowerCase());
-    return mc && ms;
-  }).sort((a, b) => a.dist - b.dist);
+  const filtered = useMemo(() => {
+    return products.filter(p => {
+      const mc = activeCat === "all" || p.cat === activeCat;
+      const ms = p.name.toLowerCase().includes(search.toLowerCase()) || p.farmer.toLowerCase().includes(search.toLowerCase());
+      return mc && ms;
+    }).sort((a, b) => a.dist - b.dist);
+  }, [products, activeCat, search]);
 
   return (
     <>
