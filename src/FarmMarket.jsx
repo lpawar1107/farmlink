@@ -26,8 +26,8 @@ const styles = `
   .logo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--wheat); font-weight: 700; display: flex; align-items: center; gap: 8px; }
   .logo-icon { width: 32px; height: 32px; background: var(--leaf); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
   .avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--clay); display: flex; align-items: center; justify-content: center; font-size: 16px; border: 2px solid var(--wheat); cursor: pointer; }
-  .role-toggle { display: flex; background: rgba(255,255,255,0.12); border-radius: 12px; padding: 3px; gap: 2px; }
-  .role-btn { flex: 1; padding: 7px 12px; border-radius: 10px; border: none; background: transparent; color: rgba(232,201,122,0.7); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 5px; }
+  .role-toggle { display: flex; background: rgba(255,255,255,0.12); border-radius: 0px; padding: 3px; gap: 2px; }
+  .role-btn { flex: 1; padding: 7px 12px; border-radius: 0px; border: none; background: transparent; color: rgba(232,201,122,0.7); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 5px; }
   .role-btn.active { background: var(--wheat); color: var(--soil); font-weight: 600; }
   .scroll-area { flex: 1; overflow-y: auto; padding-bottom: 90px; }
   /* hide default scrollbar unless the container has the .show-scroll class */
@@ -446,7 +446,7 @@ export default function FarmMarket({ user, setUser }) {
 
               <Header role={role} setRole={setRole} navigateHome={() => navigate('/')} user={user} setUser={setUser} />
 
-          <div className={`scroll-area ${activeNav==="home" && role==="buyer" ? 'show-scroll' : ''}`} ref={scrollRef}>
+          <div className={`scroll-area ${activeNav==="home" || activeNav==="chat" || activeNav==="map" ? 'show-scroll' : ''}`} ref={scrollRef}>
 
             {/* CHAT LIST */}
             {activeNav === "chat" && (
