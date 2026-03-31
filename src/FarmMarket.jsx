@@ -312,6 +312,7 @@ export default function FarmMarket({ user, setUser }) {
 
   const pathToNav = (p) => {
     if (p.startsWith('/chat')) return 'chat';
+    if (p.startsWith('/messages')) return 'messages';
     if (p.startsWith('/cart')) return 'cart';
     if (p.startsWith('/profile')) return 'profile';
     if (p.startsWith('/map')) return 'map';
@@ -559,6 +560,8 @@ export default function FarmMarket({ user, setUser }) {
               </div>
 
           <div className="scroll-area" ref={scrollRef}>
+            {/* MESSAGES VIEW */}
+            {activeNav==="messages" && (
               <>
                 <div className="section-pad">
                   <div className="section-title">Messages 💬</div>
@@ -706,12 +709,12 @@ export default function FarmMarket({ user, setUser }) {
                 <div className="nav-label">Cart</div>
               </div>
             )}
-              <div className={`nav-item ${activeNav==="chat"?"active":""}`} onClick={()=>navigate('/chat')}>
+            <div className={`nav-item ${activeNav==="messages"?"active":""}`} onClick={()=>navigate('/messages')}>
               <div className="badge-wrap">
                 <div className="nav-icon">💬</div>
                 {totalUnread>0 && <div className="nav-badge">{totalUnread}</div>}
               </div>
-              <div className="nav-label">Chat</div>
+              <div className="nav-label">Messages</div>
             </div>
             <div className={`nav-item ${activeNav==="profile"?"active":""}`} onClick={()=>{navigate('/profile');showToast("👤 Profile coming soon!")}}>
               <div className="nav-icon">👤</div>
