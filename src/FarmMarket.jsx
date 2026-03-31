@@ -427,10 +427,10 @@ export default function FarmMarket({ user, setUser }) {
     return () => window.removeEventListener('openProfile', handler);
   }, []);
 
-  const showToast = (msg) => {
+  const showToast = useCallback((msg) => {
     setToast(msg); setToastKey(k => k + 1);
     setTimeout(() => setToast(null), 2100);
-  };
+  }, []);
 
   const formatPrice = (priceInUSD) => {
     const currencyObj = CURRENCIES[currency];
@@ -438,9 +438,9 @@ export default function FarmMarket({ user, setUser }) {
     return `${currencyObj.symbol}${convertedPrice}`;
   };
 
-  const t = (key) => {
+  const t = useCallback((key) => {
     return TRANSLATIONS[language]?.[key] || key;
-  };
+  }, [language]);
 
   const addToCart = useCallback((product, e) => {
     e?.stopPropagation();
@@ -448,7 +448,7 @@ export default function FarmMarket({ user, setUser }) {
     setCart(c => [...c, { ...product }]);
     setCartSet(s => new Set([...s, product.id]));
     showToast(`${product.emoji} ${t('addToCart')}`);
-  }, [cartSet, language, t]);
+  }, [cartSet, showToast, t]);
 
   const openConvo = useCallback((convo) => {
     const cleared = { ...convo, unread: 0 };
