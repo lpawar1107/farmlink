@@ -556,8 +556,7 @@ export default function FarmMarket({ user, setUser }) {
                 </select>
               </div>
 
-            {/* CHAT LIST */}
-            {activeNav === "chat" && (
+          <div className="scroll-area" ref={scrollRef}>
               <>
                 <div className="section-pad">
                   <div className="section-title">Messages 💬</div>
