@@ -29,7 +29,7 @@ const styles = `
   .role-toggle { display: flex; background: rgba(255,255,255,0.12); border-radius: 0px; padding: 3px; gap: 2px; margin-bottom: 10px; }
   .role-btn { flex: 1; padding: 7px 12px; border-radius: 0px; border: none; background: transparent; color: rgba(232,201,122,0.7); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 5px; }
   .role-btn.active { background: var(--wheat); color: var(--soil); font-weight: 600; }
-  .scroll-area { flex: 1; overflow-y: auto; padding-bottom: 90px; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(78,124,68,0.6) transparent; }
+  .scroll-area { flex: 1; overflow-y: auto; padding-bottom: 90px; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(78,124,68,0.6) transparent; padding: 0; }
   .scroll-area::-webkit-scrollbar { width: 8px; }
   .scroll-area::-webkit-scrollbar-track { background: transparent; }
   .scroll-area::-webkit-scrollbar-thumb { background: rgba(78,124,68,0.6); border-radius: 4px; }
@@ -39,16 +39,16 @@ const styles = `
   .section-pad.profile-pad .section-title { margin: 8px 0 4px; }
   .section-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--soil); font-weight: 700; margin: 12px 0 4px; }
   .section-sub { font-size: 12px; color: var(--bark); margin-bottom: 14px; }
-  .search-bar { margin: 0 20px 0; background: var(--paper); border: 1.5px solid var(--mist); border-radius: 14px; padding: 10px 16px; display: flex; align-items: center; gap: 10px; position: sticky; top: 0; z-index: 12; background: var(--cream); }
+  .search-bar { margin: -4px 20px 0 20px; background: var(--paper); border: 1.5px solid var(--mist); border-radius: 14px; padding: 10px 16px; display: flex; align-items: center; gap: 10px; position: sticky; top: 0; z-index: 12; }
   .search-bar input { flex: 1; background: none; border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--soil); }
   .search-bar input::placeholder { color: #bbb; }
-  .loc-banner { margin: 0 20px 0; background: linear-gradient(135deg, var(--leaf), var(--sage)); border-radius: 16px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; color: white; position: sticky; top: 0; z-index: 12; }
+  .loc-banner { margin: 0 20px -4px 20px; background: linear-gradient(135deg, var(--leaf), var(--sage)); border-radius: 16px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; color: white; position: sticky; top: 0; z-index: 12; }
   .loc-icon { font-size: 24px; background: rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .loc-text { flex: 1; }
   .loc-title { font-weight: 600; font-size: 14px; }
   .loc-sub { font-size: 11px; opacity: 0.85; margin-top: 2px; }
   .loc-btn { background: white; color: var(--leaf); border: none; border-radius: 10px; padding: 7px 12px; font-size: 11px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif; }
-  .cats { display: flex; gap: 8px; padding: 10px 20px 0; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 12; background: var(--cream); }
+  .cats { display: flex; gap: 8px; padding: 8px 20px 0 20px; margin: -2px 0 0 0; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 12; background: var(--cream); }
   .cats::-webkit-scrollbar { display: none; }
   .cat-pill { flex-shrink: 0; padding: 7px 14px; border-radius: 20px; border: 1.5px solid var(--mist); background: white; font-size: 12px; font-weight: 500; color: var(--bark); cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 5px; }
   .cat-pill.active { background: var(--leaf); border-color: var(--leaf); color: white; }
