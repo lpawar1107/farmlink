@@ -448,7 +448,7 @@ export default function FarmMarket({ user, setUser }) {
     setCart(c => [...c, { ...product }]);
     setCartSet(s => new Set([...s, product.id]));
     showToast(`${product.emoji} ${t('addToCart')}`);
-  }, [cartSet, language]);
+  }, [cartSet, language, t]);
 
   const openConvo = useCallback((convo) => {
     const cleared = { ...convo, unread: 0 };
@@ -490,7 +490,7 @@ export default function FarmMarket({ user, setUser }) {
       setSelectedProduct(null); navigate('/chat');
       setTimeout(() => openConvo(nc), 50);
     }
-  }, [convos, openConvo]);
+  }, [convos, openConvo, navigate]);
 
   const handleAddListing = useCallback(async () => {
     if (!form.name || !form.price || !form.qty) { showToast("Fill all fields"); return; }
@@ -528,7 +528,7 @@ export default function FarmMarket({ user, setUser }) {
       setForm({ name: "", price: "", unit: "kg", qty: "", cat: "veg", emoji: "🍅" });
       showToast("✅ Listing added (offline)!");
     }
-  }, [form, products, myListings, showToast]);
+  }, [form, showToast]);
 
   const filtered = useMemo(() => {
     return products.filter(p => {
@@ -640,7 +640,7 @@ export default function FarmMarket({ user, setUser }) {
                         </div>
                       </div>
                       <div className="listing-right">
-                        <div className="listing-price">${l.price}/{l.unit}</div>
+                        <div className="listing-price">{formatPrice(l.price)}/{l.unit}</div>
                         <div className="listing-qty">{l.qty} left</div>
                       </div>
                     </div>
@@ -786,7 +786,7 @@ export default function FarmMarket({ user, setUser }) {
                   <div className="detail-tag">🌿 Locally grown</div>
                 </div>
                 <div className="detail-price-row">
-                  <div className="detail-price">${(selectedProduct.price*qty).toFixed(2)} <span style={{fontSize:14,fontWeight:400,color:"var(--bark)"}}>/{qty} {selectedProduct.unit}</span></div>
+                  <div className="detail-price">{formatPrice(selectedProduct.price*qty)} <span style={{fontSize:14,fontWeight:400,color:"var(--bark)"}}> /{qty} {selectedProduct.unit}</span></div>
                   <div className="qty-control">
                     <button className="qty-btn" onClick={()=>setQty(q=>Math.max(1,q-1))}>−</button>
                     <span className="qty-num">{qty}</span>
