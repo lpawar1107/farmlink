@@ -29,7 +29,7 @@ const styles = `
   .role-toggle { display: flex; background: rgba(255,255,255,0.12); border-radius: 0px; padding: 3px; gap: 2px; margin-bottom: 10px; }
   .role-btn { flex: 1; padding: 7px 12px; border-radius: 0px; border: none; background: transparent; color: rgba(232,201,122,0.7); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 5px; }
   .role-btn.active { background: var(--wheat); color: var(--soil); font-weight: 600; }
-  .scroll-area { flex: 1; overflow-y: auto; padding-bottom: 90px; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(78,124,68,0.6) transparent; padding: 0; }
+  .scroll-area { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(78,124,68,0.6) transparent; padding: 0 0 90px 0; background: var(--cream); }
   .scroll-area::-webkit-scrollbar { width: 8px; }
   .scroll-area::-webkit-scrollbar-track { background: transparent; }
   .scroll-area::-webkit-scrollbar-thumb { background: rgba(78,124,68,0.6); border-radius: 4px; }
@@ -99,7 +99,7 @@ const styles = `
   .emoji-option { width: 42px; height: 42px; border-radius: 10px; background: var(--paper); border: 2px solid transparent; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; }
   .emoji-option.selected { border-color: var(--leaf); background: rgba(78,124,68,0.1); }
   .submit-btn { width: 100%; padding: 15px; border-radius: 16px; background: linear-gradient(135deg, var(--soil), var(--bark)); color: var(--wheat); border: none; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 6px; }
-  .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid var(--mist); display: flex; padding: 10px 10px 24px; z-index: 11; width: 390px; }
+  .bottom-nav { position: absolute; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid var(--mist); display: flex; padding: 10px 10px 24px; z-index: 11; width: 100%; }
   .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px; cursor: pointer; border-radius: 12px; }
   .nav-item.active { background: rgba(78,124,68,0.08); }
   .nav-icon { font-size: 20px; }
@@ -474,14 +474,6 @@ const TRANSLATIONS = {
   },
 };
 
-// Currency support - USD, INR, EUR, GBP
-const CURRENCIES = {
-  USD: { symbol: "$", rate: 1, name: "US Dollar" },
-  INR: { symbol: "₹", rate: 82.5, name: "Indian Rupee" },
-  EUR: { symbol: "€", rate: 0.92, name: "Euro" },
-  GBP: { symbol: "£", rate: 0.79, name: "British Pound" },
-};
-
 const PRODUCE_EMOJIS = ["🥕","🥦","🍅","🌽","🥬","🍆","🫑","🧅","🥔","🍠","🫘","🌾","🍎","🍊","🍋","🍇","🫐","🍓","🥝","🥛","🧀","🥚","🌿","🌱"];
 
 const INITIAL_PRODUCTS = [
@@ -558,7 +550,6 @@ export default function FarmMarket({ user, setUser }) {
   const messagesEndRef = useRef(null);
   const [form, setForm] = useState({ name: "", price: "", unit: "kg", qty: "", cat: "veg", emoji: "🍅" });
   const [language, setLanguage] = useState("en");
-  const [currency, setCurrency] = useState("INR");
 
   const totalUnread = convos.reduce((a, c) => a + c.unread, 0);
 
@@ -653,9 +644,7 @@ export default function FarmMarket({ user, setUser }) {
   }, []);
 
   const formatPrice = (priceInUSD) => {
-    const currencyObj = CURRENCIES[currency];
-    const convertedPrice = (priceInUSD * currencyObj.rate).toFixed(2);
-    return `${currencyObj.symbol}${convertedPrice}`;
+    return `$${parseFloat(priceInUSD).toFixed(2)}`;
   };
 
   const t = useCallback((key) => {
