@@ -188,7 +188,7 @@ const TRANSLATIONS = {
     home: "Home",
     map: "Map",
     cart: "Cart",
-    chat: "Chat",
+    messages: "Messages",
     profile: "Profile",
     searchPlaceholder: "Search produce or farm...",
     nearbyProduce: "Nearby Produce",
@@ -197,7 +197,6 @@ const TRANSLATIONS = {
     myDashboard: "My Dashboard",
     myListings: "My Listings",
     dashboard: "Dashboard",
-    messages: "Messages 💬",
     conversations: "conversations",
     unread: "unread",
     sign: "Sign",
@@ -205,6 +204,41 @@ const TRANSLATIONS = {
     signOut: "Sign out",
     addToCart: "Added to cart!",
     price: "$",
+    language: "Language",
+    manageListings: "Manage listings and orders",
+    tapToAdd: "Tap + to add new produce",
+    active: "Active",
+    lowStock: "Low stock",
+    orders: "orders",
+    left: "left",
+    farmLocation: "Your Farm Location",
+    buyersWithin: "Buyers within 10km can find you",
+    update: "Update",
+    change: "Change",
+    showingFarms: "Showing farms within 10 km",
+    pune: "Pune, Maharashtra",
+    nearbyFarmsMap: "Nearby Farms Map",
+    tapMarkers: "Tap markers to view produce",
+    manageAccount: "Manage your account",
+    addNewListing: "Add New Listing",
+    chooseEmoji: "Choose Emoji",
+    productName: "Product Name",
+    priceLabel: "Price ($)",
+    unit: "Unit",
+    quantity: "Quantity",
+    category: "Category",
+    listMyProduce: "List My Produce",
+    addChart: "Add to Cart",
+    chat: "Chat",
+    freshToday: "Fresh Today",
+    available: "available",
+    locallyGrown: "Locally grown",
+    minOrder: "Minimum Order",
+    viewProfile: "View Profile",
+    signin: "Sign in",
+    logout: "Sign out",
+    welcome: "Welcome",
+    roleOption: "Role: ",
   },
   hi: {
     buyer: "🛒 क्रेता",
@@ -212,7 +246,7 @@ const TRANSLATIONS = {
     home: "होम",
     map: "नक्शा",
     cart: "कार्ट",
-    chat: "चैट",
+    messages: "संदेश",
     profile: "प्रोफाइल",
     searchPlaceholder: "उपज या खेत खोजें...",
     nearbyProduce: "पास की उपज",
@@ -221,7 +255,6 @@ const TRANSLATIONS = {
     myDashboard: "मेरा डैशबोर्ड",
     myListings: "मेरी सूचियाँ",
     dashboard: "डैशबोर्ड",
-    messages: "संदेश 💬",
     conversations: "बातचीत",
     unread: "अपठित",
     sign: "साइन",
@@ -229,6 +262,41 @@ const TRANSLATIONS = {
     signOut: "साइन आउट करें",
     addToCart: "कार्ट में जोड़ा गया!",
     price: "₹",
+    language: "भाषा",
+    manageListings: "सूचियों और ऑर्डर संचालित करें",
+    tapToAdd: "नई उपज जोड़ने के लिए + दबाएं",
+    active: "सक्रिय",
+    lowStock: "कम स्टॉक",
+    orders: "ऑर्डर",
+    left: "बाकी",
+    farmLocation: "आपके खेत का स्थान",
+    buyersWithin: "10 किमी के भीतर खरीदारों को आप मिल सकते हैं",
+    update: "अपडेट करें",
+    change: "बदलें",
+    showingFarms: "10 किमी के भीतर खेत दिखा रहे हैं",
+    pune: "पुणे, महाराष्ट्र",
+    nearbyFarmsMap: "पास के खेतों का नक्शा",
+    tapMarkers: "उपज देखने के लिए मार्कर दबाएं",
+    manageAccount: "अपने अकाउंट को संचालित करें",
+    addNewListing: "नई सूची जोड़ें",
+    chooseEmoji: "इमोजी चुनें",
+    productName: "उत्पाद का नाम",
+    priceLabel: "मूल्य (₹)",
+    unit: "यूनिट",
+    quantity: "मात्रा",
+    category: "श्रेणी",
+    listMyProduce: "मेरी उपज सूचीबद्ध करें",
+    addChart: "कार्ट में जोड़ें",
+    chat: "चैट",
+    freshToday: "आज ताजा",
+    available: "उपलब्ध",
+    locallyGrown: "स्थानीय रूप से उगाया गया",
+    minOrder: "न्यूनतम ऑर्डर",
+    viewProfile: "प्रोफाइल देखें",
+    signin: "साइन इन करें",
+    logout: "साइन आउट करें",
+    welcome: "स्वागत है",
+    roleOption: "भूमिका: ",
   },
   mr: {
     buyer: "🛒 खरेदीदार",
@@ -236,7 +304,7 @@ const TRANSLATIONS = {
     home: "होम",
     map: "नकाशा",
     cart: "कार्ट",
-    chat: "चॅट",
+    messages: "संदेश",
     profile: "प्रोफाइल",
     searchPlaceholder: "उत्पादन किंवा खेत शोधा...",
     nearbyProduce: "जवळचे उत्पादन",
@@ -245,7 +313,6 @@ const TRANSLATIONS = {
     myDashboard: "माझे डॅशबोर्ड",
     myListings: "माझ्या यादी",
     dashboard: "डॅशबोर्ड",
-    messages: "संदेश 💬",
     conversations: "संभाषण",
     unread: "अपठित",
     sign: "साइन",
@@ -253,6 +320,157 @@ const TRANSLATIONS = {
     signOut: "साइन आउट करा",
     addToCart: "कार्टमध्ये जोडले गेले!",
     price: "₹",
+    language: "भाषा",
+    manageListings: "यादी आणि ऑर्डर व्यवस्थापित करा",
+    tapToAdd: "नवीन उत्पादन जोडण्यासाठी + टॅप करा",
+    active: "सक्रिय",
+    lowStock: "कमी स्टॉक",
+    orders: "ऑर्डर",
+    left: "उरलेले",
+    farmLocation: "तुमचा शेत स्थान",
+    buyersWithin: "10 किमीमधील खरेदी करणारे तुम्हाला शोधू शकतात",
+    update: "अपडेट करा",
+    change: "बदला",
+    showingFarms: "10 किमीमधील शेत दर्शवित आहे",
+    pune: "पुणे, महाराष्ट्र",
+    nearbyFarmsMap: "जवळच्या शेतांचा नकाशा",
+    tapMarkers: "उत्पादन पाहण्यासाठी मार्कर टॅप करा",
+    manageAccount: "अपना खाता प्रबंधित करें",
+    addNewListing: "नवीन यादी जोडा",
+    chooseEmoji: "इमोजी निवडा",
+    productName: "उत्पादाचे नाव",
+    priceLabel: "किंमत (₹)",
+    unit: "युनिट",
+    quantity: "प्रमाण",
+    category: "वर्ग",
+    listMyProduce: "माझे उत्पादन सूचीबद्ध करा",
+    addChart: "कार्टमध्ये जोडा",
+    chat: "चॅट",
+    freshToday: "आज ताजे",
+    available: "उपलब्ध",
+    locallyGrown: "स्थानिक पातळीवर उगवले",
+    minOrder: "किमान ऑर्डर",
+    viewProfile: "प्रोफाइल पाहा",
+    signin: "साइन इन करा",
+    logout: "साइन आउट करा",
+    welcome: "स्वागत आहे",
+    roleOption: "भूमिका: ",
+  },
+  ta: {
+    buyer: "🛒 வாங்குபவர்",
+    farmer: "🌱 விவசாயி",
+    home: "முகப்பு",
+    map: "வரைபடம்",
+    cart: "வண்டி",
+    messages: "செய்திகள்",
+    profile: "சுயவிவரம்",
+    searchPlaceholder: "பயிர் அல்லது பண்ணை தேடுக...",
+    nearbyProduce: "அருகில் உள்ள பயிர்",
+    sortedBy: "தூரத்தால் வரிசையாக",
+    listings: "பட்டியல்கள்",
+    myDashboard: "என் டாஷ்போர்ட்",
+    myListings: "என் பட்டியல்கள்",
+    dashboard: "டாஷ்போர்ட்",
+    conversations: "உரையாடல்கள்",
+    unread: "படிக்கப்படாத",
+    sign: "உள்நுழைக",
+    signIn: "உள்நுழையவும்",
+    signOut: "வெளியேறவும்",
+    addToCart: "வண்டியில் சேர்க்கப்பட்டது!",
+    price: "₹",
+    language: "மொழி",
+    manageListings: "பட்டியல்கள் மற்றும் ஆர்டர்களை நிர்வகிக்கவும்",
+    tapToAdd: "புதிய பயிர் சேர்க்க + தட்டவும்",
+    active: "செயல்பாட்டில் உள்ளது",
+    lowStock: "குறைந்த பங்குகள்",
+    orders: "ஆர்டர்கள்",
+    left: "மீதி",
+    farmLocation: "உங்கள் பண்ணையின் இருப்பிடம்",
+    buyersWithin: "10 கிமி க்குள் உள்ள வாங்குபவர்கள் உங்களைக் கண்டறிய முடியும்",
+    update: "புதுப்பிக்கவும்",
+    change: "மாற்றவும்",
+    showingFarms: "10 கிமி க்குள் பண்ணைகளைக் காட்டுகிறது",
+    pune: "புனே, மகாராஷ்டிரா",
+    nearbyFarmsMap: "அருகில் உள்ள பண்ணைகளின் வரைபடம்",
+    tapMarkers: "பயிரைக் காண மார்க்கர்களைத் தட்டவும்",
+    manageAccount: "உங்கள் கணக்கை நிர்வகிக்கவும்",
+    addNewListing: "புதிய பட்டியல் சேர்க்கவும்",
+    chooseEmoji: "எமோஜி தேர்ந்தெடுக்கவும்",
+    productName: "பொருளின் பெயர்",
+    priceLabel: "விலை (₹)",
+    unit: "யூனிட்",
+    quantity: "அளவு",
+    category: "வகை",
+    listMyProduce: "என் பயிரைப் பட்டியலிடுக",
+    addChart: "வண்டியில் சேர்க்கவும்",
+    chat: "சேட்",
+    freshToday: "இன்று புதிதாக",
+    available: "கிடைக்கிறது",
+    locallyGrown: "உள்ளூரில் வளர்ந்த",
+    minOrder: "குறைந்தபட்ச ஆர்டர்",
+    viewProfile: "சுயவிவரம் பார்க்கவும்",
+    signin: "உள்நுழையவும்",
+    logout: "வெளியேறவும்",
+    welcome: "வரவேற்க்கிறோம்",
+    roleOption: "பாத்திரம்: ",
+  },
+  te: {
+    buyer: "🛒 కొనుగోలుదారు",
+    farmer: "🌱 రైతు",
+    home: "హోమ్",
+    map: "మ్యాప్",
+    cart: "కార్ట్",
+    messages: "సందేశాలు",
+    profile: "ప్రొఫైల్",
+    searchPlaceholder: "పంట లేదా ఫారమ్ సెర్చ్ చేయండి...",
+    nearbyProduce: "సమీప ఫస్ట్",
+    sortedBy: "దూరం ద్వారా క్రమబద్ధీకరించబడింది",
+    listings: "జాబితాలు",
+    myDashboard: "నా డ్యాష్‌బోర్డ్",
+    myListings: "నా జాబితాలు",
+    dashboard: "డ్యాష్‌బోర్డ్",
+    conversations: "సంభాషణలు",
+    unread: "చదవని",
+    sign: "సైన్",
+    signIn: "సైన్‌ఇన్ చేయండి",
+    signOut: "సైన్‌అవుట్ చేయండి",
+    addToCart: "కార్ట్‌కు జోడించబడింది!",
+    price: "₹",
+    language: "భాష",
+    manageListings: "జాబితాలు మరియు ఆర్డర్‌లను నిర్వహించండి",
+    tapToAdd: "కొత్త ఫస్ట్‌ను జోడించడానికి + నొక్కండి",
+    active: "క్రియాశీల",
+    lowStock: "తక్కువ స్టాక్",
+    orders: "అర్డర్‌లు",
+    left: "మిగిలినవి",
+    farmLocation: "మీ ఫారమ్ స్థానం",
+    buyersWithin: "10 కిమీ లోపల కొనుగోలుదారులు మిమ్మల్ని కనుగొనవచ్చు",
+    update: "నవీకరణ చేయండి",
+    change: "మార్చండి",
+    showingFarms: "10 కిమీ లోపల ఫారమ్‌లను చూపుతోంది",
+    pune: "పూణே, మహారాష్ట్ర",
+    nearbyFarmsMap: "సమీప ఫారమ్‌ల మ్యాప్",
+    tapMarkers: "పంటను వీక్షించడానికి మార్కర్‌లను నొక్కండి",
+    manageAccount: "మీ ఖాతాను నిర్వహించండి",
+    addNewListing: "కొత్త జాబితాను జోడించండి",
+    chooseEmoji: "ఇమోజీని ఎంచుకోండి",
+    productName: "ఉత్పత్తి పేరు",
+    priceLabel: "ధర (₹)",
+    unit: "యూనిట్",
+    quantity: "పరిమాణం",
+    category: "వర్గం",
+    listMyProduce: "నా పంటను జాబితా చేయండి",
+    addChart: "కార్ట్‌కు జోడించండి",
+    chat: "చాట్",
+    freshToday: "ఈ రోజు తాజా",
+    available: "అందుబాటులో",
+    locallyGrown: "స్థానికంగా పెరిగిన",
+    minOrder: "కనీస ఆర్డర్",
+    viewProfile: "ప్రొఫైల్ చూడండి",
+    signin: "సైన్‌ఇన్ చేయండి",
+    logout: "సైన్‌అవుట్ చేయండి",
+    welcome: "స్వాగతం",
+    roleOption: "పాత్ర: ",
   },
 };
 
@@ -353,17 +571,18 @@ export default function FarmMarket({ user, setUser }) {
     let mounted = true;
     const load = async () => {
       try {
+        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
         const [pRes, lRes, cRes] = await Promise.all([
-          fetch('http://localhost:4000/products'),
-          fetch('http://localhost:4000/listings'),
-          fetch('http://localhost:4000/convos'),
+          fetch(`${apiUrl}/products`),
+          fetch(`${apiUrl}/listings`),
+          fetch(`${apiUrl}/convos`),
         ]);
         if (!mounted) return;
         if (pRes.ok) setProducts(await pRes.json());
         if (lRes.ok) setMyListings(await lRes.json());
         if (cRes.ok) setConvos(await cRes.json());
       } catch (err) {
-        console.warn('Mock API not available, using local data', err);
+        console.warn('Backend API not available, using local data', err);
       }
     };
     load();
@@ -504,7 +723,8 @@ export default function FarmMarket({ user, setUser }) {
 
     // try posting to mock API; fallback to local update
     try {
-      const resP = await fetch('http://localhost:4000/products', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+      const resP = await fetch(`${apiUrl}/products`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(np)
       });
       const created = resP.ok ? await resP.json() : { id: Date.now(), ...np };
@@ -512,7 +732,7 @@ export default function FarmMarket({ user, setUser }) {
       const listing = { id: created.id, name: created.name, emoji: created.emoji, price: created.price, unit: created.unit, qty: created.qty, status: 'active', orders: 0 };
       // try add to listings too
       try {
-        await fetch('http://localhost:4000/listings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(listing) });
+        await fetch(`${apiUrl}/listings`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(listing) });
       } catch (err) { console.warn('Could not POST listing', err); }
 
       setProducts(p => [created, ...p]);
@@ -546,16 +766,12 @@ export default function FarmMarket({ user, setUser }) {
         <div className="phone">
             <div className="statusbar"></div>
 
-              <Header role={role} setRole={setRole} navigateHome={() => navigate('/')} user={user} setUser={setUser} />
+              <Header role={role} setRole={setRole} navigateHome={() => navigate('/')} user={user} setUser={setUser} language={language} t={t} />
               
               <div style={{background:"var(--soil)",padding:"8px 20px",display:"flex",gap:"12px",fontSize:"12px",alignItems:"center",borderBottom:"1px solid var(--bark)",position:"sticky",top:0,zIndex:14}}>
                 <label style={{color:"var(--wheat)",fontWeight:500,minWidth:"60px"}}>Language:</label>
                 <select value={language} onChange={(e)=>setLanguage(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"5px 8px",background:"white",cursor:"pointer",fontSize:"12px",fontWeight:500}}>
                   {Object.entries(LANGUAGES).map(([code,lang])=><option key={code} value={code}>{lang.label}</option>)}
-                </select>
-                <label style={{color:"var(--wheat)",fontWeight:500,minWidth:"60px"}}>Currency:</label>
-                <select value={currency} onChange={(e)=>setCurrency(e.target.value)} style={{border:"none",borderRadius:"4px",padding:"5px 8px",background:"white",cursor:"pointer",fontSize:"12px",fontWeight:500}}>
-                  {Object.entries(CURRENCIES).map(([code,curr])=><option key={code} value={code}>{code}</option>)}
                 </select>
               </div>
 
@@ -564,8 +780,8 @@ export default function FarmMarket({ user, setUser }) {
             {activeNav==="messages" && (
               <>
                 <div className="section-pad">
-                  <div className="section-title">Messages 💬</div>
-                  <div className="section-sub">{convos.length} conversations · {totalUnread} unread</div>
+                  <div className="section-title">{t('messages')} 💬</div>
+                  <div className="section-sub">{convos.length} {t('conversations')} · {totalUnread} {t('unread')}</div>
                 </div>
                 <div className="convo-list" style={{marginTop:12}}>
                   {convos.map(c => (
@@ -593,12 +809,12 @@ export default function FarmMarket({ user, setUser }) {
               <>
                 <div className="loc-banner">
                   <div className="loc-icon">📍</div>
-                  <div className="loc-text"><div className="loc-title">Pune, Maharashtra</div><div className="loc-sub">Showing farms within 10 km</div></div>
-                  <button className="loc-btn">Change</button>
+                  <div className="loc-text"><div className="loc-title">{t('pune')}</div><div className="loc-sub">{t('showingFarms')}</div></div>
+                  <button className="loc-btn">{t('change')}</button>
                 </div>
                 <div className="search-bar">
                   <span style={{fontSize:15,color:"var(--bark)"}}>🔍</span>
-                  <input placeholder="Search produce or farm..." value={search} onChange={e=>setSearch(e.target.value)}/>
+                  <input placeholder={t('searchPlaceholder')} value={search} onChange={e=>setSearch(e.target.value)}/>
                 </div>
                 <div className="cats">
                   {CATEGORIES.map(c=>(
@@ -606,8 +822,8 @@ export default function FarmMarket({ user, setUser }) {
                   ))}
                 </div>
                 <div className="section-pad">
-                  <div className="section-title">Nearby Produce</div>
-                  <div className="section-sub">Sorted by distance · {filtered.length} listings</div>
+                  <div className="section-title">{t('nearbyProduce')}</div>
+                  <div className="section-sub">{t('sortedBy')} · {filtered.length} {t('listings')}</div>
                 </div>
                 <div className="product-grid">
                   {filtered.map(p=> (
@@ -621,17 +837,17 @@ export default function FarmMarket({ user, setUser }) {
             {activeNav==="home" && role==="farmer" && (
               <>
                 <div className="section-pad">
-                  <div className="section-title">My Dashboard</div>
-                  <div className="section-sub">Manage listings and orders</div>
+                  <div className="section-title">{t('myDashboard')}</div>
+                  <div className="section-sub">{t('manageListings')}</div>
                 </div>
                 <div className="stats-row">
-                  <div className="stat-card"><div className="stat-icon">📦</div><div className="stat-num">{myListings.length}</div><div className="stat-label">Listings</div></div>
-                  <div className="stat-card"><div className="stat-icon">🛍️</div><div className="stat-num">{myListings.reduce((a,b)=>a+b.orders,0)}</div><div className="stat-label">Orders</div></div>
+                  <div className="stat-card"><div className="stat-icon">📦</div><div className="stat-num">{myListings.length}</div><div className="stat-label">{t('listings')}</div></div>
+                  <div className="stat-card"><div className="stat-icon">🛍️</div><div className="stat-num">{myListings.reduce((a,b)=>a+b.orders,0)}</div><div className="stat-label">{t('orders')}</div></div>
                   <div className="stat-card"><div className="stat-icon">💰</div><div className="stat-num">$124</div><div className="stat-label">This Week</div></div>
                 </div>
                 <div className="section-pad" style={{marginTop:20}}>
-                  <div className="section-title">My Listings</div>
-                  <div className="section-sub">Tap + to add new produce</div>
+                  <div className="section-title">{t('myListings')}</div>
+                  <div className="section-sub">{t('tapToAdd')}</div>
                 </div>
                 <div className="my-listings">
                   {myListings.map(l=>(
@@ -641,12 +857,12 @@ export default function FarmMarket({ user, setUser }) {
                         <div className="listing-name">{l.name}</div>
                         <div className="listing-meta">
                           <span className="status-dot" style={{background:l.status==="active"?"var(--leaf)":"var(--sun)"}}/>
-                          {l.status==="active"?"Active":"Low stock"} · {l.orders} orders
+                          {l.status==="active"?t('active'):t('lowStock')} · {l.orders} {t('orders')}
                         </div>
                       </div>
                       <div className="listing-right">
                         <div className="listing-price">{formatPrice(l.price)}/{l.unit}</div>
-                        <div className="listing-qty">{l.qty} left</div>
+                        <div className="listing-qty">{l.qty} {t('left')}</div>
                       </div>
                     </div>
                   ))}
@@ -654,8 +870,8 @@ export default function FarmMarket({ user, setUser }) {
                 <div style={{margin:"20px 20px 0"}}>
                   <div className="loc-banner">
                     <div className="loc-icon">📍</div>
-                    <div className="loc-text"><div className="loc-title">Your Farm Location</div><div className="loc-sub">Buyers within 10 km can find you</div></div>
-                    <button className="loc-btn">Update</button>
+                    <div className="loc-text"><div className="loc-title">{t('farmLocation')}</div><div className="loc-sub">{t('buyersWithin')}</div></div>
+                    <button className="loc-btn">{t('update')}</button>
                   </div>
                 </div>
               </>
@@ -665,8 +881,8 @@ export default function FarmMarket({ user, setUser }) {
             {activeNav === "map" && (
               <>
                 <div className="section-pad">
-                  <div className="section-title">Nearby Farms Map</div>
-                  <div className="section-sub">Tap markers to view produce</div>
+                  <div className="section-title">{t('nearbyFarmsMap')}</div>
+                  <div className="section-sub">{t('tapMarkers')}</div>
                 </div>
                 <MapView products={products} onSelect={(p)=>{setSelectedProduct(p);setQty(1);navigate('/');}} onAddToCart={(p)=>{addToCart(p);}} onStartChat={(p)=>{startChat(p);}} />
               </>
@@ -676,8 +892,8 @@ export default function FarmMarket({ user, setUser }) {
                 {activeNav === "profile" && (
                   <>
                     <div className="section-pad profile-pad" ref={profileRef}>
-                      <div className="section-title">Profile</div>
-                      <div className="section-sub">Manage your account</div>
+                      <div className="section-title">{t('profile')}</div>
+                      <div className="section-sub">{t('manageAccount')}</div>
                     </div>
                     <div style={{padding: '0 20px 40px'}}>
                       <Profile user={user} setUser={setUser} />
@@ -694,11 +910,11 @@ export default function FarmMarket({ user, setUser }) {
           <div className="bottom-nav">
             <div className={`nav-item ${activeNav==="home"?"active":""}`} onClick={()=>navigate('/') }>
               <div className="nav-icon">{role==="farmer"?"🌾":"🏠"}</div>
-              <div className="nav-label">Home</div>
+              <div className="nav-label">{t('home')}</div>
             </div>
             <div className={`nav-item ${activeNav==="map"?"active":""}`} onClick={()=>{navigate('/map');showToast("🗺️ Map coming soon!")}}>
               <div className="nav-icon">🗺️</div>
-              <div className="nav-label">Map</div>
+              <div className="nav-label">{t('map')}</div>
             </div>
             {role==="buyer" && (
               <div className={`nav-item ${activeNav==="cart"?"active":""}`} onClick={()=>navigate('/cart')}>
@@ -706,7 +922,7 @@ export default function FarmMarket({ user, setUser }) {
                   <div className="nav-icon">🛒</div>
                   {cart.length>0 && <div className="nav-badge">{cart.length}</div>}
                 </div>
-                <div className="nav-label">Cart</div>
+                <div className="nav-label">{t('cart')}</div>
               </div>
             )}
             <div className={`nav-item ${activeNav==="messages"?"active":""}`} onClick={()=>navigate('/messages')}>
@@ -714,11 +930,11 @@ export default function FarmMarket({ user, setUser }) {
                 <div className="nav-icon">💬</div>
                 {totalUnread>0 && <div className="nav-badge">{totalUnread}</div>}
               </div>
-              <div className="nav-label">Messages</div>
+              <div className="nav-label">{t('messages')}</div>
             </div>
             <div className={`nav-item ${activeNav==="profile"?"active":""}`} onClick={()=>{navigate('/profile');showToast("👤 Profile coming soon!")}}>
               <div className="nav-icon">👤</div>
-              <div className="nav-label">Profile</div>
+              <div className="nav-label">{t('profile')}</div>
             </div>
           </div>
 
@@ -731,9 +947,9 @@ export default function FarmMarket({ user, setUser }) {
             <div className="modal-overlay" onClick={()=>setShowModal(false)}>
               <div className="modal-sheet" onClick={e=>e.stopPropagation()}>
                 <div className="modal-handle"/>
-                <div className="modal-title">Add New Listing</div>
+                <div className="modal-title">{t('addNewListing')}</div>
                 <div className="form-group">
-                  <label className="form-label">Choose Emoji</label>
+                  <label className="form-label">{t('chooseEmoji')}</label>
                   <div className="emoji-grid">
                     {PRODUCE_EMOJIS.map(em=>(
                       <div key={em} className={`emoji-option ${form.emoji===em?"selected":""}`} onClick={()=>setForm(f=>({...f,emoji:em}))}>{em}</div>
@@ -741,16 +957,16 @@ export default function FarmMarket({ user, setUser }) {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className="form-label">Product Name</label>
+                  <label className="form-label">{t('productName')}</label>
                   <input className="form-input" placeholder="e.g. Fresh Tomatoes" value={form.name} onChange={e=>setForm(f=>({...f,name:e.target.value}))}/>
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label className="form-label">Price ($)</label>
+                    <label className="form-label">{t('priceLabel')}</label>
                     <input className="form-input" type="number" placeholder="0.00" value={form.price} onChange={e=>setForm(f=>({...f,price:e.target.value}))}/>
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Unit</label>
+                    <label className="form-label">{t('unit')}</label>
                     <select className="form-input" value={form.unit} onChange={e=>setForm(f=>({...f,unit:e.target.value}))}>
                       <option>kg</option><option>dozen</option><option>bunch</option><option>liter</option><option>piece</option>
                     </select>
@@ -758,18 +974,18 @@ export default function FarmMarket({ user, setUser }) {
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label className="form-label">Quantity</label>
+                    <label className="form-label">{t('quantity')}</label>
                     <input className="form-input" type="number" placeholder="50" value={form.qty} onChange={e=>setForm(f=>({...f,qty:e.target.value}))}/>
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Category</label>
+                    <label className="form-label">{t('category')}</label>
                     <select className="form-input" value={form.cat} onChange={e=>setForm(f=>({...f,cat:e.target.value}))}>
                       <option value="veg">Vegetables</option><option value="fruit">Fruits</option>
                       <option value="grain">Grains</option><option value="dairy">Dairy</option><option value="herb">Herbs</option>
                     </select>
                   </div>
                 </div>
-                <button className="submit-btn" onClick={handleAddListing}>🌾 List My Produce</button>
+                <button className="submit-btn" onClick={handleAddListing}>🌾 {t('listMyProduce')}</button>
               </div>
             </div>
           )}
@@ -786,9 +1002,9 @@ export default function FarmMarket({ user, setUser }) {
                   <span style={{background:"var(--sky)",color:"#2a6b8a",padding:"2px 8px",borderRadius:6,fontSize:11,fontWeight:600}}>{selectedProduct.dist}km away</span>
                 </div>
                 <div className="detail-tags">
-                  {selectedProduct.fresh && <div className="detail-tag">🌟 Fresh Today</div>}
-                  <div className="detail-tag">📦 {selectedProduct.qty} {selectedProduct.unit} available</div>
-                  <div className="detail-tag">🌿 Locally grown</div>
+                  {selectedProduct.fresh && <div className="detail-tag">🌟 {t('freshToday')}</div>}
+                  <div className="detail-tag">📦 {selectedProduct.qty} {selectedProduct.unit} {t('available')}</div>
+                  <div className="detail-tag">🌿 {t('locallyGrown')}</div>
                 </div>
                 <div className="detail-price-row">
                   <div className="detail-price">{formatPrice(selectedProduct.price*qty)} <span style={{fontSize:14,fontWeight:400,color:"var(--bark)"}}> /{qty} {selectedProduct.unit}</span></div>
@@ -799,8 +1015,8 @@ export default function FarmMarket({ user, setUser }) {
                   </div>
                 </div>
                 <div style={{display:"flex",gap:10}}>
-                  <button className="submit-btn" style={{flex:1}} onClick={()=>{addToCart(selectedProduct);setSelectedProduct(null)}}>🛒 Add to Cart</button>
-                  <button className="submit-btn" style={{flex:1,background:"linear-gradient(135deg,#2a6b8a,#4a9bc0)"}} onClick={()=>startChat(selectedProduct)}>💬 Chat</button>
+                  <button className="submit-btn" style={{flex:1}} onClick={()=>{addToCart(selectedProduct);setSelectedProduct(null)}}>🛒 {t('addChart')}</button>
+                  <button className="submit-btn" style={{flex:1,background:"linear-gradient(135deg,#2a6b8a,#4a9bc0)"}} onClick={()=>startChat(selectedProduct)}>💬 {t('chat')}</button>
                 </div>
               </div>
             </div>

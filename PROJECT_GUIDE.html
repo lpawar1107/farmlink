@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmLink Project - Complete Guide for Beginners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c5f2d;
+            border-bottom: 4px solid #2c5f2d;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #4e7c44;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4e7c44;
+            padding-left: 15px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #6b9a6e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .intro-box {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #4e7c44;
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+            border-left: 4px solid #4e7c44;
+        }
+        
+        .component-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid #c47c4a;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "🌾";
+            position: absolute;
+            left: 0;
+        }
+        
+        .tip-box {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #f2a93b;
+        }
+        
+        .warning-box {
+            background: #ffebee;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #c47c4a;
+        }
+        
+        .page-break {
+            page-break-after: always;
+            margin: 40px 0;
+            padding: 40px 0;
+            border-bottom: 2px dashed #ddd;
+        }
+        
+        .diagram {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid #7a9b6e;
+            text-align: center;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background: #4e7c44;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            color: #666;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- TITLE PAGE -->
+        <div style="text-align: center; padding: 60px 0; margin-bottom: 40px;">
+            <h1 style="border: none; font-size: 3.5em; color: #2c5f2d;">🌾 FarmLink</h1>
+            <h2 style="border: none; color: #6b9a6e; margin-top: 10px;">Farm-to-Consumer Marketplace</h2>
+            <p style="font-size: 1.2em; color: #666; margin-top: 20px;">Complete Project Guide for Beginners</p>
+            <p style="color: #999; margin-top: 30px;">Last Updated: March 2026</p>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <h2>📑 Table of Contents</h2>
+        <ol style="font-size: 1.1em; line-height: 2;">
+            <li>Project Overview</li>
+            <li>Project Structure</li>
+            <li>Technologies Used</li>
+            <li>How the App Works</li>
+            <li>FarmMarket.jsx - Main Component</li>
+            <li>Individual Components</li>
+            <li>Key Features Explained</li>
+            <li>How to Run & Modify</li>
+        </ol>
+
+        <div class="page-break"></div>
+
+        <!-- 1. PROJECT OVERVIEW -->
+        <h2>1. Project Overview</h2>
+        
+        <div class="intro-box">
+            <h3>What is FarmLink?</h3>
+            <p>FarmLink is a modern web application that connects farmers directly with buyers. It's designed like a mobile app running in a browser, allowing:</p>
+            <ul class="feature-list">
+                <li><strong>Buyers</strong> to search and purchase fresh produce directly from nearby farms</li>
+                <li><strong>Farmers</strong> to list their products and manage orders</li>
+                <li><strong>Instant Messaging</strong> between farmers and buyers</li>
+                <li><strong>Multi-Language Support</strong> (English, Hindi, Marathi, Tamil, Telugu)</li>
+                <li><strong>Multi-Currency Support</strong> (USD, INR, EUR, GBP)</li>
+                <li><strong>Real-Time Location Tracking</strong> of nearby farms</li>
+            </ul>
+        </div>
+
+        <h3>Key Goals</h3>
+        <table>
+            <tr>
+                <th>Goal</th>
+                <th>How It's Achieved</th>
+            </tr>
+            <tr>
+                <td>Reduce middlemen</td>
+                <td>Direct farmer-to-buyer connection through chat</td>
+            </tr>
+            <tr>
+                <td>Support local agriculture</td>
+                <td>Show farms within 10km radius</td>
+            </tr>
+            <tr>
+                <td>Easy to use</td>
+                <td>Mobile-like interface with simple navigation</td>
+            </tr>
+            <tr>
+                <td>Inclusive</td>
+                <td>Support multiple languages and currencies</td>
+            </tr>
+        </table>
+
+        <div class="page-break"></div>
+
+        <!-- 2. PROJECT STRUCTURE -->
+        <h2>2. Project Structure</h2>
+
+        <div class="diagram">
+farmlink/
+├── src/
+│   ├── FarmMarket.jsx         (Main component - handles everything)
+│   ├── App.js                 (React Router setup)
+│   ├── index.js               (Entry point)
+│   ├── App.css, index.css      (Global styles)
+│   └── components/
+│       ├── Header.jsx          (Top navigation bar)
+│       ├── ProductCard.jsx     (Product display card)
+│       ├── CartModal.jsx       (Shopping cart)
+│       ├── ChatScreen.jsx      (Messaging interface)
+│       ├── MapView.jsx         (Map with farm locations)
+│       ├── Profile.jsx         (User profile)
+│       └── Login.jsx           (Authentication)
+├── public/
+│   └── index.html             (HTML template)
+├── package.json               (Dependencies)
+├── db.json                    (Mock database)
+└── README.md                  (Project info)
+        </div>
+
+        <h3>What Each Folder Does:</h3>
+        <ul class="feature-list">
+            <li><strong>src/</strong> - All React code goes here</li>
+            <li><strong>components/</strong> - Reusable UI components</li>
+            <li><strong>public/</strong> - Static files (HTML, images)</li>
+            <li><strong>db.json</strong> - Fake database (like a data store)</li>
+        </ul>
+
+        <div class="page-break"></div>
+
+        <!-- 3. TECHNOLOGIES -->
+        <h2>3. Technologies Used</h2>
+
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+                <th>What It Does</th>
+            </tr>
+            <tr>
+                <td><strong>React</strong></td>
+                <td>Frontend Framework</td>
+                <td>Creates interactive user interfaces</td>
+            </tr>
+            <tr>
+                <td><strong>React Router</strong></td>
+                <td>Navigation</td>
+                <td>Handles page routing (home, cart, profile, etc.)</td>
+            </tr>
+            <tr>
+                <td><strong>JavaScript (ES6+)</strong></td>
+                <td>Programming Language</td>
+                <td>Business logic and interactivity</td>
+            </tr>
+            <tr>
+                <td><strong>CSS3</strong></td>
+                <td>Styling</td>
+                <td>Makes the app look beautiful</td>
+            </tr>
+            <tr>
+                <td><strong>JSON Server</strong></td>
+                <td>Mock API</td>
+                <td>Simulates a backend database</td>
+            </tr>
+            <tr>
+                <td><strong>Fetch API</strong></td>
+                <td>Data Communication</td>
+                <td>Sends requests to the backend</td>
+            </tr>
+        </table>
+
+        <div class="tip-box">
+            <strong>💡 Beginner Tip:</strong> You don't need to understand all these deeply. Focus on React concepts first - Components, State, and Props.
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 4. HOW THE APP WORKS -->
+        <h2>4. How the App Works - The Big Picture</h2>
+
+        <div class="diagram">
+USER OPENS APP
+        ↓
+App.js initializes React Router
+        ↓
+FarmMarket.jsx loads as main component
+        ↓
+Header appears (logo, avatar, role toggle)
+        ↓
+Based on role (Buyer/Farmer), show appropriate content
+        ↓
+Bottom Navigation tabs appear
+        ↓
+User clicks tabs to navigate between pages
+        ↓
+Each interaction updates React State
+        ↓
+UI automatically re-renders with new data
+        </div>
+
+        <h3>The Two Roles:</h3>
+
+        <div class="component-box">
+            <h4>👤 BUYER Role</h4>
+            <p>Can:</p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>Browse and search products from farms</li>
+                <li>Add items to cart</li>
+                <li>Place orders</li>
+                <li>Chat with farmers</li>
+                <li>View products on map</li>
+            </ul>
+            <p style="margin-top: 10px;">Cannot: Add or edit product listings</p>
+        </div>
+
+        <div class="component-box">
+            <h4>🌾 FARMER Role</h4>
+            <p>Can:</p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>Add new product listings</li>
+                <li>Manage existing listings</li>
+                <li>View orders</li>
+                <li>Chat with buyers</li>
+                <li>See analytics (orders, earnings)</li>
+            </ul>
+            <p style="margin-top: 10px;">Sees: Dashboard with stats instead of product grid</p>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 5. FARMMARKET.JSX -->
+        <h2>5. FarmMarket.jsx - The Main Component</h2>
+
+        <div class="intro-box">
+            <p>This is the <strong>heart of your app</strong>. It's responsible for:</p>
+            <ul class="feature-list">
+                <li>Managing all global state (data)</li>
+                <li>Handling all business logic</li>
+                <li>Coordinating between all components</li>
+                <li>Managing navigation and routing</li>
+            </ul>
+        </div>
+
+        <h3>Understanding State</h3>
+        <p>State is like the app's memory. It stores data that changes over time.</p>
+
+        <div class="code-block">
+// Buyer's shopping cart
+const [cart, setCart] = useState([]);
+
+// What products are being shown
+const [products, setProducts] = useState(INITIAL_PRODUCTS);
+
+// Currently selected product for detail view
+const [selectedProduct, setSelectedProduct] = useState(null);
+
+// Active navigation tab (home, map, cart, profile, messages)
+const [activeNav, setActiveNav] = useState("home");
+
+// User's selected language
+const [language, setLanguage] = useState("en");
+
+// User's selected currency
+const [currency, setCurrency] = useState("INR");
+        </div>
+
+        <h3>Key Functions in FarmMarket.jsx</h3>
+
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>What It Does</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><code>addToCart()</code></td>
+                <td>Adds a product to the shopping cart</td>
+                <td>User clicks + button on product</td>
+            </tr>
+            <tr>
+                <td><code>sendMessage()</code></td>
+                <td>Sends a chat message to a farmer/buyer</td>
+                <td>User types message in chat</td>
+            </tr>
+            <tr>
+                <td><code>handleAddListing()</code></td>
+                <td>Farmer adds a new product listing</td>
+                <td>Farmer fills form and clicks "List"</td>
+            </tr>
+            <tr>
+                <td><code>formatPrice()</code></td>
+                <td>Converts prices to selected currency</td>
+                <td>$2 becomes ₹165 (INR)</td>
+            </tr>
+            <tr>
+                <td><code>openConvo()</code></td>
+                <td>Opens a conversation with a user</td>
+                <td>User clicks on a message thread</td>
+            </tr>
+        </table>
+
+        <h3>How Data Flows After User Action</h3>
+
+        <div class="diagram">
+USER CLICKS BUTTON
+        ↓
+onClick event fires
+        ↓
+Function is called (e.g., addToCart())
+        ↓
+State is updated (e.g., setCart())
+        ↓
+React detects state change
+        ↓
+Component re-renders with new data
+        ↓
+User sees updated UI
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 6. INDIVIDUAL COMPONENTS -->
+        <h2>6. Individual Components Explained</h2>
+
+        <!-- 6.1 HEADER -->
+        <h3>📱 1. Header.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> Top of every page</p>
+            <p><strong>Purpose:</strong> Navigation and user info</p>
+            
+            <p style="margin-top: 15px;"><strong>What It Shows:</strong></p>
+            <ul class="feature-list">
+                <li>App logo (🌾 KisanLink)</li>
+                <li>User avatar (clicking opens menu)</li>
+                <li>Role toggle buttons (Buyer / Farmer)</li>
+                <li>Dropdown menu with options (Profile, Dashboard, Sign Out)</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Key Code:</strong></p>
+            <div class="code-block">
+// User clicks avatar
+onClick={(e)=>{e.stopPropagation(); setOpen(o=>!o);}}
+
+// Shows/hides menu when avatar is clicked
+{open && (
+  &lt;div style={{menu styles}}&gt;
+    {/* Menu items here */}
+  &lt;/div&gt;
+)}
+            </div>
+
+            <p style="margin-top: 15px;"><strong>What It Does:</strong></p>
+            <ul class="feature-list">
+                <li>Toggles between Buyer and Farmer role</li>
+                <li>Opens user profile</li>
+                <li>Allows user to sign out</li>
+                <li>Displays user name and role</li>
+            </ul>
+        </div>
+
+        <!-- 6.2 PRODUCTCARD -->
+        <h3>🍅 2. ProductCard.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> Product grid on home page</p>
+            <p><strong>Purpose:</strong> Display individual product information</p>
+            
+            <p style="margin-top: 15px;"><strong>What It Shows:</strong></p>
+            <ul class="feature-list">
+                <li>Product emoji (🍅 for tomato, 🥕 for carrot)</li>
+                <li>Product name ("Fresh Tomatoes")</li>
+                <li>Farmer name</li>
+                <li>Price and unit</li>
+                <li>Distance from buyer</li>
+                <li>"Fresh" badge if newly harvested</li>
+                <li>Add to cart button (+)</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Example Product Card:</strong></p>
+            <div class="diagram">
+┌─────────────────────┐
+│      🍅 (emoji)     │  ← Product emoji
+├─────────────────────┤
+│ Fresh Tomatoes      │  ← Product name
+│ Ravi Kumar          │  ← Farmer name
+│ ₹165 / kg           │  ← Price
+│ 1.2 km away         │  ← Distance
+│ ⭐ Fresh Today     │  ← Fresh badge
+│ [+] Add to Cart     │  ← Button
+└─────────────────────┘
+            </div>
+
+            <p style="margin-top: 15px;"><strong>What Happens When User Clicks:</strong></p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li><strong>On product card:</strong> Opens detailed product view (modal)</li>
+                <li><strong>On + button:</strong> Adds to cart (no detail view)</li>
+            </ul>
+        </div>
+
+        <!-- 6.3 CARTMODAL -->
+        <h3>🛒 3. CartModal.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> Cart page (bottom nav)</p>
+            <p><strong>Purpose:</strong> Show items in cart and checkout</p>
+            
+            <p style="margin-top: 15px;"><strong>What It Shows:</strong></p>
+            <ul class="feature-list">
+                <li>All items added to cart</li>
+                <li>Quantity of each item</li>
+                <li>Total price calculation</li>
+                <li>Remove item option</li>
+                <li>"Place Order" button</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Example Cart Flow:</strong></p>
+            <div class="diagram">
+1. User adds items to cart from home
+         ↓
+2. Cart shows all items with quantities
+         ↓
+3. Total price auto-calculates
+         ↓
+4. User clicks "Place Order"
+         ↓
+5. Order is confirmed
+6. Cart clears
+7. Toast message shows "Order placed!"
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Key Feature:</strong></p>
+            <p>Prevents duplicate items - if product already in cart, clicking + just increases quantity instead of adding again.</p>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 6.4 CHATSCREEN -->
+        <h3>💬 4. ChatScreen.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> Full screen overlay when messaging</p>
+            <p><strong>Purpose:</strong> Real-time chat between farmers and buyers</p>
+            
+            <p style="margin-top: 15px;"><strong>What It Shows:</strong></p>
+            <ul class="feature-list">
+                <li>Chat partner name and online status</li>
+                <li>All messages in conversation (yours in green, theirs in white)</li>
+                <li>Timestamps for each message</li>
+                <li>Quick reply suggestions</li>
+                <li>Message input field</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Example Chat Screen:</strong></p>
+            <div class="diagram">
+┌────────────────────────────┐
+│ ← Ravi Kumar (Online)      │  ← Header
+├────────────────────────────┤
+│ □ Hello! Is tomato fresh?  │  ← Their msg (left)
+│ 10:20 AM                   │
+│                            │
+│              Yes! Fresh    │  ← Your msg (right)
+│              today 🍅     │
+│                      10:22 │
+│                            │
+│ How much min order?        │  ← Their msg
+│ 10:30 AM                   │
+├────────────────────────────┤
+│ [Is this available?]       │  ← Quick replies
+│ [What's the price?]        │
+├────────────────────────────┤
+│ [Type message...] [Send→]  │  ← Input
+└────────────────────────────┘
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Smart Features:</strong></p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>Auto-replies - sends random response after 1.5 seconds</li>
+                <li>Quick reply buttons - common phrases</li>
+                <li>Shows online/offline status with green dot</li>
+                <li>Full conversation history</li>
+            </ul>
+        </div>
+
+        <!-- 6.5 MAPVIEW -->
+        <h3>🗺️ 5. MapView.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> Map page (bottom nav)</p>
+            <p><strong>Purpose:</strong> Show farms on interactive map</p>
+            
+            <p style="margin-top: 15px;"><strong>Features:</strong></p>
+            <ul class="feature-list">
+                <li>Displays Google Map with farm markers</li>
+                <li>Each marker shows farm location</li>
+                <li>Click marker to see products from that farm</li>
+                <li>Distance calculated from buyer location</li>
+                <li>Direct chat option from map</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>How It Works:</strong></p>
+            <div class="diagram">
+1. App loads nearby farms from products array
+2. Extract unique farm names and locations
+3. Create Google Map with markers
+4. Each marker is a farm
+5. Show product list when marker clicked
+6. Allow "Chat" or "Add to Cart" from map
+            </div>
+        </div>
+
+        <!-- 6.6 PROFILE -->
+        <h3>👤 6. Profile.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> Profile page (bottom nav)</p>
+            <p><strong>Purpose:</strong> Show user information and preferences</p>
+            
+            <p style="margin-top: 15px;"><strong>What It Shows:</strong></p>
+            <ul class="feature-list">
+                <li>User name and email</li>
+                <li>Account type (Farmer or Buyer)</li>
+                <li>Farm location (if farmer)</li>
+                <li>Total earnings (if farmer)</li>
+                <li>User preferences (language, currency)</li>
+                <li>Settings options</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Buyer Profile Shows:</strong></p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>Saved addresses</li>
+                <li>Order history</li>
+                <li>Favorite farms</li>
+                <li>Payment methods</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>Farmer Profile Shows:</strong></p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>Farm name and location</li>
+                <li>Total sales</li>
+                <li>Total reviews</li>
+                <li>Account verification status</li>
+            </ul>
+        </div>
+
+        <!-- 6.7 LOGIN -->
+        <h3>🔐 7. Login.jsx</h3>
+        <div class="component-box">
+            <p><strong>Location:</strong> /login route</p>
+            <p><strong>Purpose:</strong> Authenticate users</p>
+            
+            <p style="margin-top: 15px;"><strong>Features:</strong></p>
+            <ul class="feature-list">
+                <li>Email/password login form</li>
+                <li>Role selection (Buyer or Farmer)</li>
+                <li>Sign up option</li>
+                <li>"Remember me" checkbox</li>
+                <li>Stores user in localStorage</li>
+            </ul>
+
+            <p style="margin-top: 15px;"><strong>How Authentication Works:</strong></p>
+            <div class="diagram">
+1. User enters email and password
+        ↓
+2. Click "Sign In"
+        ↓
+3. Validate credentials (basic check)
+        ↓
+4. Create user object
+        ↓
+5. Save to localStorage
+        ↓
+6. Set user in React state
+        ↓
+7. Redirect to home page
+        ↓
+8. Header shows user name and role
+            </div>
+
+            <div class="tip-box">
+                <strong>💡 Note:</strong> This is simplified. Real apps use backends for security.
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 7. KEY FEATURES -->
+        <h2>7. Key Features Explained in Depth</h2>
+
+        <h3>🌐 Multi-Language Support</h3>
+        <div class="component-box">
+            <p><strong>How It Works:</strong></p>
+            <div class="code-block">
+// Language translations object
+const TRANSLATIONS = {
+  en: { home: "Home", cart: "Cart", ... },
+  hi: { home: "होम", cart: "कार्ट", ... },
+  mr: { home: "होम", cart: "कार्ट", ... },
+  // More languages...
+};
+
+// Function to get translated text
+const t = useCallback((key) => {
+  return TRANSLATIONS[language]?.[key] || key;
+}, [language]);
+
+// Use it anywhere
+&lt;div&gt;{t('home')}&lt;/div&gt;  // Shows "Home" or "होम" etc
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Supported Languages:</strong></p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>English</li>
+                <li>हिंदी (Hindi)</li>
+                <li>मराठी (Marathi)</li>
+                <li>தமிழ் (Tamil)</li>
+                <li>తెలుగు (Telugu)</li>
+            </ul>
+        </div>
+
+        <h3>💱 Multi-Currency System</h3>
+        <div class="component-box">
+            <p><strong>How It Works:</strong></p>
+            <div class="code-block">
+// Currency definitions
+const CURRENCIES = {
+  USD: { symbol: "$", rate: 1, name: "US Dollar" },
+  INR: { symbol: "₹", rate: 82.5, name: "Indian Rupee" },
+  EUR: { symbol: "€", rate: 0.92, name: "Euro" },
+  GBP: { symbol: "£", rate: 0.79, name: "British Pound" },
+};
+
+// Format price function
+const formatPrice = (priceInUSD) => {
+  const currencyObj = CURRENCIES[currency];
+  const convertedPrice = (priceInUSD * currencyObj.rate).toFixed(2);
+  return `${currencyObj.symbol}${convertedPrice}`;
+};
+
+// Example: formatPrice(2.5) when currency is INR
+// → "₹206.25"
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Logic:</strong></p>
+            <ol style="margin-left: 20px;">
+                <li>All prices stored in USD internally</li>
+                <li>User selects preferred currency</li>
+                <li>Multiply by exchange rate</li>
+                <li>Display with correct symbol</li>
+            </ol>
+        </div>
+
+        <h3>📍 Location & Distance Calculation</h3>
+        <div class="component-box">
+            <p><strong>How It Works:</strong></p>
+            <div class="code-block">
+// Each product has coordinates
+const product = {
+  name: "Tomatoes",
+  lat: 18.5220,    // Latitude
+  lng: 73.8575,    // Longitude
+  dist: 1.2,       // Distance in km (pre-calculated)
+};
+
+// Products automatically sorted by distance
+const filtered = useMemo(() => {
+  return products
+    .filter(p => p.cat === activeCat)
+    .sort((a, b) => a.dist - b.dist);  // Closest first
+}, [products, activeCat]);
+
+// Show sorted list to user
+// User sees closest farms first
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Distance Formula (Real App):</strong></p>
+            <p>Real apps use Haversine formula to calculate distance from user coordinates to farm coordinates. For now, distances are pre-set in data.</p>
+        </div>
+
+        <h3>🛍️ Shopping Cart Logic</h3>
+        <div class="component-box">
+            <p><strong>State Management:</strong></p>
+            <div class="code-block">
+// Array of cart items
+const [cart, setCart] = useState([]);
+
+// Set to track which product IDs are in cart
+const [cartSet, setCartSet] = useState(new Set());
+
+// Add to cart function
+const addToCart = useCallback((product) => {
+  // Check if already in cart
+  if (cartSet.has(product.id)) return;
+  
+  // Add to arrays
+  setCart(c => [...c, product]);
+  setCartSet(s => new Set([...s, product.id]));
+  
+  // Show success message
+  showToast(`${product.emoji} Added to cart!`);
+}, [cartSet]);
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Why Two Data Structures?</strong></p>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li><code>cart</code> array - access all product details</li>
+                <li><code>cartSet</code> - fast lookup (O(1) instead of O(n))</li>
+                <li>Together they're efficient and complete</li>
+            </ul>
+        </div>
+
+        <h3>💬 Messaging System</h3>
+        <div class="component-box">
+            <p><strong>Data Structure:</strong></p>
+            <div class="code-block">
+// Each conversation
+{
+  id: 1,
+  name: "Ravi Kumar",          // Person's name
+  emoji: "👨‍🌾",
+  online: true,
+  unread: 2,                   // New messages count
+  time: "10:32 AM",
+  preview: "Is the tomato still available?",
+  messages: [
+    {
+      id: 1,
+      from: "them",           // Who sent it
+      text: "Hello! I saw your listing",
+      time: "10:20 AM"
+    },
+    {
+      id: 2,
+      from: "me",
+      text: "Yes! Fresh picked this morning",
+      time: "10:22 AM"
+    }
+  ]
+}
+            </div>
+
+            <p style="margin-top: 15px;"><strong>Auto-Reply Feature:</strong></p>
+            <div class="code-block">
+// After user sends message
+setTimeout(() => {
+  // Generate random reply from list
+  const replies = [
+    "Sure! 👍",
+    "Let me check and get back",
+    "Yes, available anytime!",
+    "How much quantity do you need?",
+  ];
+  
+  const reply = {
+    id: Date.now() + 1,
+    from: "them",
+    text: replies[Math.floor(Math.random() * replies.length)],
+    time: "Just now"
+  };
+  
+  // Add to messages
+  setActiveConvo(prev => ({
+    ...prev,
+    messages: [...prev.messages, reply]
+  }));
+}, 1500);  // Reply after 1.5 seconds
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 8. HOW TO RUN & MODIFY -->
+        <h2>8. How to Run & Modify the App</h2>
+
+        <h3>Running the App</h3>
+        <div class="code-block">
+# Navigate to project folder
+cd farmlink
+
+# Install dependencies
+npm install
+
+# Start development mode
+npm run dev
+
+# Open in browser
+# http://localhost:3000
+        </div>
+
+        <p style="margin-top: 15px;"><strong>What `npm run dev` does:</strong></p>
+        <div class="diagram">
+npm run dev
+        ↓
+Starts two servers:
+        ↓
+1. JSON Server (port 4000)
+   - Serves mock database
+   - Listens at http://localhost:4000
+        ↓
+2. React Server (port 3000)
+   - Serves React app
+   - Listens at http://localhost:3000
+        </div>
+
+        <h3>Common Modifications</h3>
+
+        <h4>1. Change App Colors</h4>
+        <div class="code-block">
+// In FarmMarket.jsx styles
+:root {
+  --soil: #3d2b1f;          ← Dark brown
+  --bark: #6b4226;          ← Medium brown
+  --clay: #c47c4a;          ← Orange
+  --wheat: #e8c97a;         ← Light yellow
+  --sage: #7a9b6e;          ← Light green
+  --leaf: #4e7c44;          ← Dark green
+  --sprout: #a8c97a;        ← Olive
+  --cream: #fdf6ec;         ← Off white
+}
+
+// Change these hex codes to new colors
+        </div>
+
+        <h4>2. Add a New Product</h4>
+        <div class="code-block">
+// In FarmMarket.jsx - INITIAL_PRODUCTS array
+const INITIAL_PRODUCTS = [
+  {
+    id: 1,
+    name: "Organic Tomatoes",
+    emoji: "🍅",
+    price: 2.5,              // in USD
+    unit: "kg",
+    farmer: "Ravi Kumar",
+    farmerId: 2,
+    dist: 1.2,               // in km
+    cat: "veg",              // category
+    qty: 50,                 // available quantity
+    fresh: true,
+    lat: 18.5220,
+    lng: 73.8575
+  },
+  // Add new product here...
+];
+        </div>
+
+        <h4>3. Change Product Categories</h4>
+        <div class="code-block">
+// In FarmMarket.jsx - CATEGORIES array
+const CATEGORIES = [
+  { id: "all", label: "All", icon: "🌾" },
+  { id: "veg", label: "Vegetables", icon: "🥦" },
+  { id: "fruit", label: "Fruits", icon: "🍎" },
+  { id: "grain", label: "Grains", icon: "🌽" },
+  { id: "dairy", label: "Dairy", icon: "🥛" },
+  // Add new category here...
+];
+        </div>
+
+        <h4>4. Modify Translation Text</h4>
+        <div class="code-block">
+// In FarmMarket.jsx - TRANSLATIONS object
+const TRANSLATIONS = {
+  en: {
+    home: "Home",            // Change this
+    cart: "Shopping Bag",    // Change this
+    messages: "Messages 💬",
+    // ... more translations
+  }
+};
+        </div>
+
+        <h3>Understanding React Hooks Used</h3>
+
+        <table>
+            <tr>
+                <th>Hook</th>
+                <th>Purpose</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><code>useState()</code></td>
+                <td>Store & update component data</td>
+                <td>const [cart, setCart] = useState([])</td>
+            </tr>
+            <tr>
+                <td><code>useEffect()</code></td>
+                <td>Run code when component loads/updates</td>
+                <td>Load products from API</td>
+            </tr>
+            <tr>
+                <td><code>useCallback()</code></td>
+                <td>Memoize functions (optimization)</td>
+                <td>Prevent unnecessary re-renders</td>
+            </tr>
+            <tr>
+                <td><code>useMemo()</code></td>
+                <td>Memoize computed values (optimization)</td>
+                <td>Filter & sort products</td>
+            </tr>
+            <tr>
+                <td><code>useRef()</code></td>
+                <td>Access DOM directly</td>
+                <td>Scroll to element</td>
+            </tr>
+            <tr>
+                <td><code>useNavigate()</code></td>
+                <td>Programmatic page navigation</td>
+                <td>navigate('/cart')</td>
+            </tr>
+            <tr>
+                <td><code>useLocation()</code></td>
+                <td>Get current page info</td>
+                <td>Get current URL path</td>
+            </tr>
+        </table>
+
+        <h3>Debugging Tips</h3>
+
+        <div class="warning-box">
+            <strong>⚠️ Common Issues & Solutions:</strong>
+            <ul style="margin-left: 20px; list-style: disc; margin-top: 10px;">
+                <li><strong>Port 3000 already in use:</strong> Kill the process: <code>Get-Process node | Stop-Process -Force</code></li>
+                <li><strong>Blank page loading:</strong> Check browser console (F12) for errors</li>
+                <li><strong>API not working:</strong> Make sure JSON server is running on port 4000</li>
+                <li><strong>Styles not loading:</strong> Clear cache (Ctrl+Shift+R) or hard refresh</li>
+                <li><strong>Navigation not working:</strong> Check React Router setup in App.js</li>
+            </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- LEARNING PATH -->
+        <h2>🎓 Recommended Learning Path</h2>
+
+        <div class="component-box">
+            <h3>If You're New to React:</h3>
+            <ol style="margin-left: 20px;">
+                <li><strong>Week 1-2:</strong> Learn React basics
+                    <ul style="margin-left: 20px; list-style: disc; margin-top: 10px;">
+                        <li>What is JSX?</li>
+                        <li>Components and props</li>
+                        <li>State with useState()</li>
+                        <li>Event handling (onClick, onChange)</li>
+                    </ul>
+                </li>
+                <li><strong>Week 3:</strong> Learn hooks
+                    <ul style="margin-left: 20px; list-style: disc; margin-top: 10px;">
+                        <li>useEffect() for side effects</li>
+                        <li>useRef() for DOM access</li>
+                        <li>Custom hooks</li>
+                    </ul>
+                </li>
+                <li><strong>Week 4:</strong> Learn routing
+                    <ul style="margin-left: 20px; list-style: disc; margin-top: 10px;">
+                        <li>React Router basics</li>
+                        <li>Navigation between pages</li>
+                        <li>URL parameters</li>
+                    </ul>
+                </li>
+                <li><strong>Week 5+:</strong> Study this project code
+                    <ul style="margin-left: 20px; list-style: disc; margin-top: 10px;">
+                        <li>Understand FarmMarket.jsx</li>
+                        <li>Study each component</li>
+                        <li>Modify and experiment</li>
+                        <li>Add your own features</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <h3>Resources to Learn From</h3>
+        <ul style="margin-left: 20px; list-style: disc;">
+            <li><strong>React Docs:</strong> https://react.dev (official, best)</li>
+            <li><strong>YouTube:</strong> Traversy Media, Programming with Mosh</li>
+            <li><strong>Practice:</strong> CodePen, CodeSandbox</li>
+            <li><strong>Projects:</strong> Build small apps first, then tackle Big projects</li>
+        </ul>
+
+        <div class="page-break"></div>
+
+        <!-- SUMMARY -->
+        <h2>📋 Quick Reference Summary</h2>
+
+        <div class="component-box">
+            <h3>App Architecture Overview</h3>
+            <div class="diagram">
+┌─────────────────────────────────────────┐
+│          App.js (Router Setup)          │
+│  Sets up React Router and main routes   │
+└────────────────┬────────────────────────┘
+                 │
+                 ↓
+┌─────────────────────────────────────────┐
+│    FarmMarket.jsx (Main Component)      │
+│  Manages all state & business logic     │
+│  Coordinates all child components       │
+└────┬──────────┬──────────┬──────────┬───┘
+     │          │          │          │
+     ↓          ↓          ↓          ↓
+ Header    ProductCard  CartModal  ChatScreen
+ Profile   MapView      Login      etc.
+            </div>
+
+            <h3>Data Flow Pattern</h3>
+            <div class="diagram">
+User Interaction
+       ↓
+Event Handler Called
+       ↓
+State Updated (setCart, setProducts, etc)
+       ↓
+React Re-renders Components
+       ↓
+New Data Passed to Children as Props
+       ↓
+UI Updates on Screen
+            </div>
+
+            <h3>Component Props Pattern</h3>
+            <div class="code-block">
+// Parent (FarmMarket.jsx) passes data to child
+&lt;ProductCard 
+  product={product}
+  cartSet={cartSet}
+  addToCart={addToCart}
+  onSelect={setSelectedProduct}
+/&gt;
+
+// Child (ProductCard.jsx) receives and uses props
+export default function ProductCard({ 
+  product, 
+  cartSet, 
+  addToCart, 
+  onSelect 
+}) {
+  return (
+    &lt;div onClick={() => onSelect(product)}&gt;
+      {product.name}
+      &lt;button onClick={(e) => addToCart(product, e)}&gt;+&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- KEY TAKEAWAYS -->
+        <h2>🎯 Key Takeaways for Beginners</h2>
+
+        <div class="intro-box">
+            <h3>✅ Do's</h3>
+            <ul class="feature-list">
+                <li>Break code into small, reusable components</li>
+                <li>Keep state in the highest parent component</li>
+                <li>Pass functions down as props for child-to-parent communication</li>
+                <li>Use meaningful variable names</li>
+                <li>Test in browser DevTools console</li>
+                <li>Read error messages carefully</li>
+                <li>Learn from other developers' code</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h3>❌ Don'ts</h3>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li>Don't mutate state directly (always use setState)</li>
+                <li>Don't put all code in one giant component</li>
+                <li>Don't forget to add keys to lists</li>
+                <li>Don't ignore console warnings</li>
+                <li>Don't hardcode data (fetch from API)</li>
+                <li>Don't start with complex features</li>
+            </ul>
+        </div>
+
+        <div class="component-box">
+            <h3>💡 Pro Tips</h3>
+            <ul class="feature-list">
+                <li>Use React DevTools browser extension to inspect components</li>
+                <li>Break large components into smaller ones</li>
+                <li>Use descriptive naming for functions (handleClick, onAddToCart)</li>
+                <li>Document your code with comments</li>
+                <li>Test one thing at a time</li>
+                <li>Read the React documentation when stuck</li>
+                <li>Look at similar open-source projects</li>
+            </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- NEXT STEPS -->
+        <h2>🚀 Next Steps to Enhance This Project</h2>
+
+        <div class="component-box">
+            <h3>Easy Additions (Great for Learning)</h3>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li><strong>Add product search:</strong> Filter by product name</li>
+                <li><strong>Add favorites:</strong> Save products to wishlist</li>
+                <li><strong>Add ratings:</strong> Star ratings for products</li>
+                <li><strong>Add notifications:</strong> Toast messages for all actions</li>
+                <li><strong>Add loading states:</strong> Show spinner while fetching</li>
+            </ul>
+        </div>
+
+        <div class="component-box">
+            <h3>Medium Difficulty (Skills Building)</h3>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li><strong>Add real backend:</strong> Connect to Node.js + MongoDB</li>
+                <li><strong>Add authentication:</strong> Real login with JWT tokens</li>
+                <li><strong>Add payment:</strong> Stripe or PayPal integration</li>
+                <li><strong>Add notifications:</strong> Real-time push notifications</li>
+                <li><strong>Add review system:</strong> Ratings and reviews</li>
+            </ul>
+        </div>
+
+        <div class="component-box">
+            <h3>Advanced Additions (Professional Level)</h3>
+            <ul style="margin-left: 20px; list-style: disc;">
+                <li><strong>Add real-time chat:</strong> Socket.io for live messaging</li>
+                <li><strong>Add analytics:</strong> Google Analytics integration</li>
+                <li><strong>Add mobile app:</strong> React Native version</li>
+                <li><strong>Add seller dashboard:</strong> Advanced analytics for farmers</li>
+                <li><strong>Add logistics tracking:</strong> Order delivery tracking</li>
+            </ul>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <h3>Good luck with learning React! 🎉</h3>
+            <p>Keep practicing, keep experimenting, and don't give up when things get confusing.</p>
+            <p>Every expert was once a beginner. Happy coding!</p>
+            <p style="margin-top: 20px; color: #999;">
+                FarmLink Project Guide • March 2026
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Print instruction message
+        window.addEventListener('beforeprint', function() {
+            alert('Great! You can now save this as PDF.\n\nUse File → Print → Save as PDF');
+        });
+    </script>
+</body>
+</html>
