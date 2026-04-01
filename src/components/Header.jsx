@@ -12,7 +12,7 @@ export default function Header({ role, setRole, navigateHome, user, setUser, lan
     return () => document.removeEventListener('click', onDoc);
   }, []);
 
-  const avatar = user ? (user.name.split(' ').map(s=>s[0]).slice(0,2).join('')) : '👨‍🌾';
+  const avatarDisplay = user ? (user.avatar || '👨‍🌾') : '👨‍🌾';
 
   // dispatch a global event as a fallback so the container can react and show profile
   const handleProfileWithEvent = () => { setOpen(false); try { window.dispatchEvent(new Event('openProfile')); } catch(e){} nav('/profile'); };
@@ -23,7 +23,7 @@ export default function Header({ role, setRole, navigateHome, user, setUser, lan
     <div className="header" ref={ref} style={{position:'relative'}}>
       <div className="header-top">
         <div className="logo"><div className="logo-icon">🌾</div>KisanLink</div>
-        <div className="avatar" onClick={(e)=>{e.stopPropagation(); setOpen(o=>!o);}} title={user ? user.name : t('signIn')} style={{cursor:'pointer'}}>{user ? avatar : '👨‍🌾'}</div>
+        <div className="avatar" onClick={(e)=>{e.stopPropagation(); setOpen(o=>!o);}} title={user ? user.name : t('signIn')} style={{cursor:'pointer'}}>{avatarDisplay}</div>
       </div>
       <div className="role-toggle">
         <button className={`role-btn ${role==="buyer"?"active":""}`} onClick={()=>{setRole("buyer");navigateHome()}}>{t('buyer')}</button>
